@@ -273,47 +273,50 @@ dropshipping:[
 ["Inspire Uplift","https://www.inspireuplift.com","Lifestyle product storefront"],
 ["Warmly","https://warmly.com","Home décor storefront"]],
 digital:[
-["HubSpot","https://www.hubspot.com","Inbound marketing & automation"],
-["Mailchimp","https://mailchimp.com","Email campaigns & customer journeys"],
-["Nike","https://www.nike.com","Integrated brand campaigns"],
-["Coca-Cola","https://www.coca-cola.com","Global brand storytelling"],
-["Duolingo","https://www.duolingo.com","Social-first brand marketing"],
-["Canva","https://www.canva.com","Content-led growth marketing"],
-["Notion","https://www.notion.com","Community & product-led marketing"],
-["Spotify","https://www.spotify.com","Personalized campaigns"],
-["Airbnb","https://www.airbnb.com","Brand and performance marketing"],
-["Shopify","https://www.shopify.com","Commerce content marketing"],
-["Semrush","https://www.semrush.com","Digital marketing education"],
-["Adobe","https://www.adobe.com","Creative campaigns & content"]
+["Nike","https://www.nike.com","Sportswear & footwear"],
+["Gymshark","https://www.gymshark.com","Fitness apparel"],
+["Glossier","https://www.glossier.com","Beauty & skincare"],
+["Fenty Beauty","https://fentybeauty.com","Beauty & cosmetics"],
+["Liquid Death","https://liquiddeath.com","Beverages"],
+["Huel","https://huel.com","Nutrition & meal products"],
+["Rare Beauty","https://www.rarebeauty.com","Beauty & cosmetics"],
+["SKIMS","https://skims.com","Apparel & shapewear"],
+["Olipop","https://drinkolipop.com","Soft drinks"],
+["Crocs","https://www.crocs.com","Footwear"],
+["Sephora","https://www.sephora.com","Beauty & personal care"],
+["Patagonia","https://www.patagonia.com","Outdoor apparel & gear"]
 ],
+
 audit:[
-["Apple","https://www.apple.com","Performance, accessibility & UX reference"],
-["Google Store","https://store.google.com","Navigation and product-page UX"],
-["Microsoft","https://www.microsoft.com","Accessibility and content structure"],
-["Webflow","https://webflow.com","Responsive design & page structure"],
-["Stripe","https://stripe.com","Conversion-focused UX reference"],
-["Linear","https://linear.app","Speed and interaction design"],
-["Dropbox","https://www.dropbox.com","Landing-page clarity & navigation"],
-["Intercom","https://www.intercom.com","Content hierarchy & conversion paths"],
-["Shopify","https://www.shopify.com","E-commerce UX & performance reference"],
-["Notion","https://www.notion.com","Information architecture & usability"],
-["Awwwards","https://www.awwwards.com","Web design quality inspiration"],
-["PageSpeed Insights","https://pagespeed.web.dev","Website performance testing tool"]
+["Apple","https://www.apple.com","Consumer technology"],
+["IKEA","https://www.ikea.com","Furniture & home goods"],
+["Patagonia","https://www.patagonia.com","Outdoor apparel & gear"],
+["Sephora","https://www.sephora.com","Beauty & personal care"],
+["Nike","https://www.nike.com","Sportswear & footwear"],
+["Etsy","https://www.etsy.com","Marketplace & handmade goods"],
+["Chewy","https://www.chewy.com","Pet supplies"],
+["LEGO","https://www.lego.com","Toys & building sets"],
+["Warby Parker","https://www.warbyparker.com","Eyewear"],
+["Casper","https://casper.com","Mattresses & sleep products"],
+["Quince","https://www.quince.com","Fashion & home essentials"],
+["YETI","https://www.yeti.com","Drinkware & outdoor gear"]
 ],
+
 funnels:[
-["ClickFunnels","https://www.clickfunnels.com","Landing pages & funnel platform"],
-["Kajabi","https://kajabi.com","Course and creator sales journeys"],
-["ConvertKit","https://convertkit.com","Creator lead capture & email journeys"],
-["Systeme.io","https://systeme.io","All-in-one sales funnels"],
-["Leadpages","https://www.leadpages.com","Lead generation landing pages"],
-["Unbounce","https://unbounce.com","Landing pages & conversion testing"],
-["Thrive Themes","https://thrivethemes.com","WordPress conversion tools"],
-["Teachable","https://teachable.com","Course sales journeys"],
-["Thinkific","https://www.thinkific.com","Education product funnels"],
-["Patreon","https://www.patreon.com","Membership conversion journeys"],
-["MasterClass","https://www.masterclass.com","Subscription offer presentation"],
-["Huel","https://huel.com","Direct-to-consumer purchase journey"]
-]
+["Dollar Shave Club","https://www.dollarshaveclub.com","Grooming & subscription products"],
+["Harry's","https://www.harrys.com","Men’s grooming"],
+["Huel","https://huel.com","Nutrition & meal products"],
+["AG1","https://drinkag1.com","Nutrition products"],
+["Casper","https://casper.com","Mattresses & sleep products"],
+["Brooklinen","https://www.brooklinen.com","Bedding & home essentials"],
+["Function of Beauty","https://functionofbeauty.com","Personalized hair care"],
+["Curology","https://curology.com","Skincare"],
+["HelloFresh","https://www.hellofresh.com","Meal kits"],
+["Blue Apron","https://www.blueapron.com","Meal kits"],
+["Ritual","https://ritual.com","Vitamins & wellness"],
+["Warby Parker","https://www.warbyparker.com","Eyewear"]
+],
+
 };
 const portfolioLabels={shopify:"Shopify",woocommerce:"WooCommerce",wix:"Wix",squarespace:"Squarespace",email:"Email marketing inspiration",seo:"SEO & discovery inspiration",social:"Social commerce inspiration",dropshipping:"Storefront inspiration",digital:"Digital Marketing",audit:"Website Audit & Optimization",funnels:"Sales Funnel Development"};
 const portfolioGrid=document.querySelector("#portfolio-grid");
@@ -324,7 +327,7 @@ function renderPortfolio(){
  const q=portfolioSearch.value.trim().toLowerCase();
  const entries=Object.entries(portfolioData).flatMap(([category,items])=>items.map(([name,url,description],index)=>({category,name,url,description,index})));
  const shown=entries.filter(item=>(portfolioFilter==="all"||item.category===portfolioFilter)&&(!q||[item.name,item.description,portfolioLabels[item.category]].join(" ").toLowerCase().includes(q)));
- portfolioGrid.innerHTML=shown.length?shown.map((item)=>{const preview='https://image.thum.io/get/width/1200/crop/650/noanimate/'+item.url;return '<a class="portfolio-card" href="'+item.url+'" target="_blank" rel="noopener noreferrer" aria-label="Open '+item.name+' store in a new tab"><div class="portfolio-art"><img src="'+preview+'" alt="'+item.name+' storefront hero preview" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display=\'none\';this.parentElement.style.background=\'linear-gradient(135deg,#e8ddf8,#dce7f8)\'"></div><div class="portfolio-card-body"><strong>'+item.name+'</strong><span>'+item.description+'</span><small>'+portfolioLabels[item.category]+' ↗</small></div></a>'}).join(""):'<div class="portfolio-empty">No stores match that search. Try another name or category.</div>';
+ portfolioGrid.innerHTML=shown.length?shown.map((item)=>{const preview='https://s.wordpress.com/mshots/v1/'+encodeURIComponent(item.url)+'?w=1200';return '<a class="portfolio-card" href="'+item.url+'" target="_blank" rel="noopener noreferrer" aria-label="Open '+item.name+' store in a new tab"><div class="portfolio-art"><img src="'+preview+'" alt="'+item.name+' storefront hero preview" loading="lazy" referrerpolicy="no-referrer" onerror="if(!this.dataset.fallback){this.dataset.fallback=\'1\';this.src=\'https://image.thum.io/get/width/1200/crop/650/noanimate/\'+this.closest(\'.portfolio-card\').href}else{this.remove();this.parentElement.classList.add(\'portfolio-preview-fallback\');this.parentElement.textContent=\'Store preview unavailable\'}"></div><div class="portfolio-card-body"><strong>'+item.name+'</strong><span>'+item.description+'</span><small>'+portfolioLabels[item.category]+' ↗</small></div></a>'}).join(""):'<div class="portfolio-empty">No stores match that search. Try another name or category.</div>';
 }
 document.querySelectorAll(".portfolio-filter").forEach(button=>button.addEventListener("click",()=>{portfolioFilter=button.dataset.filter;document.querySelectorAll(".portfolio-filter").forEach(b=>{const active=b===button;b.classList.toggle("active",active);b.setAttribute("aria-pressed",String(active))});renderPortfolio()}));
 portfolioSearch.addEventListener("input",renderPortfolio);
