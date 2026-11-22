@@ -115,7 +115,7 @@
 <section class="portfolio-section" id="portfolio" aria-labelledby="portfolio-title">
 <div class="container">
 <div class="portfolio-heading"><span class="eyebrow">Store Inspiration</span><h2 id="portfolio-title">Our <span class="gradient-text">Portfolio</span></h2><p>Explore real online businesses for design inspiration. Browse by primary platform or a relevant marketing theme, or search for a business name.</p></div>
-<div class="portfolio-stats" aria-label="Portfolio overview"><div class="portfolio-stat"><b>51</b><span>Store examples</span></div><div class="portfolio-stat"><b>7</b><span>Categories</span></div><div class="portfolio-stat"><b>100%</b><span>Inspiration only</span></div></div>
+<div class="portfolio-stats" aria-label="Portfolio overview"><div class="portfolio-stat"><b>92</b><span>Store examples</span></div><div class="portfolio-stat"><b>8</b><span>Categories</span></div><div class="portfolio-stat"><b>100%</b><span>Inspiration only</span></div></div>
 <div class="portfolio-controls"><div class="portfolio-filters" role="group" aria-label="Filter store examples">
 <button class="portfolio-filter active" type="button" data-filter="all" aria-pressed="true">All</button>
 <button class="portfolio-filter" type="button" data-filter="shopify" aria-pressed="false">Shopify</button>
@@ -125,8 +125,10 @@
 <button class="portfolio-filter" type="button" data-filter="email" aria-pressed="false">Email Marketing</button>
 <button class="portfolio-filter" type="button" data-filter="seo" aria-pressed="false">SEO</button>
 <button class="portfolio-filter" type="button" data-filter="social" aria-pressed="false">Social Commerce</button>
+<button class="portfolio-filter" type="button" data-filter="dropshipping" aria-pressed="false">Dropshipping</button>
 </div><input class="portfolio-search" type="search" id="portfolio-search" placeholder="⌕  Search stores..." aria-label="Search store examples"></div>
 <div class="portfolio-grid" id="portfolio-grid" aria-live="polite"></div>
+<div class="portfolio-count" id="portfolio-count" aria-live="polite">Showing 92 of 92 niches</div>
 
 </div></section>
 <section class="section section-light" id="process"><div class="container"><div class="section-heading center"><span class="eyebrow">How We Work</span><h2>A Clear Path From <span class="gradient-text">Idea to Launch.</span></h2><p>A collaborative four-step process keeps the project focused, transparent and moving in the right direction.</p></div><div class="process-grid">
@@ -258,9 +260,22 @@ social:[
 ["Fender","https://fender.com","Musical instruments and equipment"],
 ["Mouth","https://mouth.com","Artisan food and gourmet gifts"],
 ["Parachute","https://parachutehome.com","Bedding, bath and bedroom accessories"]
+],
+dropshipping:[
+["Doki Doki Cosmetics","https://dokidokicos.com","Haircare and beauty products"],
+["SilkSilky","https://silksilky.com","Silk bedding and sleep essentials"],
+["Shokz","https://shokz.com","Open-ear audio for running and sport"],
+["Compartés","https://compartes.com","Gourmet chocolate and sweets"],
+["Lancaster Archery Supply","https://lancasterarchery.com","Archery and outdoor hunting gear"],
+["Quip","https://quip.com","Oral and dental care"],
+["The House of Rare","https://thehouseofrare.com","Fashion and lifestyle"],
+["Wanderprints","https://wanderprints.com","Personalized gifts for families"],
+["Papier","https://papier.com","Books, stationery and journals"],
+["Frost Buddy","https://frostbuddy.com","Drinkware and beverage accessories"],
+["Blackstone Products","https://blackstoneproducts.com","Outdoor griddles and cooking equipment"]
 ]
 };
-const portfolioLabels={shopify:"Shopify",woocommerce:"WooCommerce",wix:"Wix",squarespace:"Squarespace",email:"Email marketing inspiration",seo:"SEO & discovery inspiration",social:"Social commerce inspiration"};
+const portfolioLabels={shopify:"Shopify",woocommerce:"WooCommerce",wix:"Wix",squarespace:"Squarespace",email:"Email marketing inspiration",seo:"SEO & discovery inspiration",social:"Social commerce inspiration",dropshipping:"Dropshipping inspiration"};
 const portfolioImages={
 "Tentree":"https://www.tentree.com/cdn/shop/files/FW26_FallLaunch1_Homepage_Desktop1_FA.jpg?v=1784829546&width=2000",
 "Taza Chocolate":"https://www.tazachocolate.com/cdn/shop/files/Taza_Spring_Header_Desktop.jpg?v=1777907518",
@@ -371,7 +386,18 @@ const portfolioImages={
 "Hatch Collection":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://hatchcollection.com",
 "Fender":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://fender.com",
 "Mouth":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://mouth.com",
-"Parachute":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://parachutehome.com"
+"Parachute":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://parachutehome.com",
+"Doki Doki Cosmetics":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://dokidokicos.com",
+"SilkSilky":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://silksilky.com",
+"Shokz":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://shokz.com",
+"Compartés":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://compartes.com",
+"Lancaster Archery Supply":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://lancasterarchery.com",
+"Quip":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://quip.com",
+"The House of Rare":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://thehouseofrare.com",
+"Wanderprints":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://wanderprints.com",
+"Papier":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://papier.com",
+"Frost Buddy":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://frostbuddy.com",
+"Blackstone Products":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://blackstoneproducts.com"
 };
 const portfolioGrid=document.querySelector("#portfolio-grid");
 const portfolioSearch=document.querySelector("#portfolio-search");
@@ -380,7 +406,10 @@ const portfolioPalette=[["#ffe5b8","#ffbd8d"],["#e2e7ff","#c8d2ff"],["#f7d9e6","
 function renderPortfolio(){
  const q=portfolioSearch.value.trim().toLowerCase();
  const entries=Object.entries(portfolioData).flatMap(([category,items])=>items.map(([name,url,description],index)=>({category,name,url,description,index,image:portfolioImages[name]})));
- const shown=entries.filter(item=>(portfolioFilter==="all"||item.category===portfolioFilter)&&(!q||[item.name,item.description,portfolioLabels[item.category]].join(" ").toLowerCase().includes(q)));
+ const categoryEntries=entries.filter(item=>portfolioFilter==="all"||item.category===portfolioFilter);
+ const shown=categoryEntries.filter(item=>!q||[item.name,item.description,portfolioLabels[item.category]].join(" ").toLowerCase().includes(q));
+ const countLabel=portfolioFilter==="all"?"niches":(portfolioLabels[portfolioFilter]||"niches");
+ document.querySelector("#portfolio-count").textContent="Showing "+shown.length+" of "+categoryEntries.length+" "+countLabel.toLowerCase();
  portfolioGrid.innerHTML=shown.length?shown.map((item)=>{
   const image=item.image?'<div class="portfolio-art"><img src="'+item.image+'" alt="'+item.name+' official homepage imagery" loading="lazy" decoding="async"></div>':'';
   return '<a class="portfolio-card" href="'+item.url+'" target="_blank" rel="noopener noreferrer" aria-label="Open '+item.name+' store in a new tab">'+image+'<div class="portfolio-card-body"><strong>'+item.name+'</strong><span>'+item.description+'</span><small>'+portfolioLabels[item.category]+' ↗</small></div></a>';
