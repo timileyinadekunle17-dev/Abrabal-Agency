@@ -52,7 +52,7 @@
 .portfolio-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
 .portfolio-card{display:block;min-width:0;border-radius:9px;overflow:hidden;background:#fff;border:1px solid #e9e6e1;box-shadow:0 3px 12px #21182b08;transition:transform .2s,box-shadow .2s}
 .portfolio-card:hover{transform:translateY(-4px);box-shadow:0 12px 25px #21182b16}
-.portfolio-art{height:168px;padding:0;display:block;overflow:hidden;background:#eee9f2}.portfolio-art img{display:block;width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .35s}.portfolio-card:hover .portfolio-art img{transform:scale(1.035)}
+.portfolio-art{height:168px;padding:0;display:block;overflow:hidden;background:#eee9f2}.portfolio-art.image-unavailable{display:grid;place-items:center;background:#eee9f2}.portfolio-art.image-unavailable:after{content:'Store image unavailable';font-size:10px;color:#777183}.portfolio-art img{display:block;width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .35s}.portfolio-card:hover .portfolio-art img{transform:scale(1.035)}
 .portfolio-browser{width:100%;height:100%;border-radius:6px;overflow:hidden;background:#fff;box-shadow:0 5px 16px #231b2b1c}
 .portfolio-browserbar{height:13px;background:#191d2b;display:flex;align-items:center;gap:3px;padding:0 6px}
 .portfolio-browserbar i{display:block;width:4px;height:4px;border-radius:50%;background:#d4c7b4}
@@ -324,15 +324,30 @@ funnels:[
 ]
 };
 const portfolioLabels={shopify:"Shopify",woocommerce:"WooCommerce",wix:"Wix",squarespace:"Squarespace",email:"Email marketing inspiration",seo:"SEO & discovery inspiration",social:"Social commerce inspiration",dropshipping:"Storefront inspiration",digital:"Digital Marketing",audit:"Website Audit & Optimization",funnels:"Sales Funnel Development"};
+const portfolioImages={
+"Tentree":"https://www.tentree.com/cdn/shop/files/FW26_FallLaunch1_Homepage_Desktop1_FA.jpg?v=1784829546&width=2000",
+"Taza Chocolate":"https://www.tazachocolate.com/cdn/shop/files/Taza_Spring_Header_Desktop.jpg?v=1777907518",
+"Flourist":"https://flourist.com/cdn/shop/files/615A8014_beb074f1-db52-4d8e-a7ff-17650835c4de.jpg?v=1782318996&width=1920",
+"Package Free":"https://packagefreeshop.com/cdn/shop/files/Hero_Desktop.jpg?v=1774985604&width=3840",
+"Tofino Soap Company":"https://tofinosoapcompany.com/cdn/shop/files/heart_handcrafted.png?v=1733429071&width=1420",
+"Izzy Wheels":"https://static.wixstatic.com/media/38036e_d8e9bf6a87f74a5faa5192aec6e8dd8e~mv2.jpg/v1/fill/w_980%2Ch_640%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/38036e_d8e9bf6a87f74a5faa5192aec6e8dd8e~mv2.jpg",
+"Frankly Good Coffee":"https://images.squarespace-cdn.com/content/v1/638b92a6785e905478e283b0/bfb76a10-5808-4045-9238-798885f523f1/2407FranklyGoodCoffee-Q3ProductShots-TheMeadowStudios-8-min.jpg",
+"Universal Yums":"https://www.universalyums.com/wp-content/uploads/2026/02/Box-of-the-month-768x742.jpg",
+"No Pong":"https://www.nopong.com.au/wp-content/uploads/2026/07/background-Spearmint-breeze.gif"
+};
 const portfolioGrid=document.querySelector("#portfolio-grid");
 const portfolioSearch=document.querySelector("#portfolio-search");
 let portfolioFilter="all";
 const portfolioPalette=[["#ffe5b8","#ffbd8d"],["#e2e7ff","#c8d2ff"],["#f7d9e6","#e8c5ff"],["#d8efe6","#b7ddd2"],["#f3e4d1","#e8d5bd"],["#e7dff8","#c7b9ef"]];
 function renderPortfolio(){
  const q=portfolioSearch.value.trim().toLowerCase();
- const entries=Object.entries(portfolioData).flatMap(([category,items])=>items.map(([name,url,description],index)=>({category,name,url,description,index})));
+ const entries=Object.entries(portfolioData).flatMap(([category,items])=>items.map(([name,url,description],index)=>({category,name,url,description,index,image:portfolioImages[name]})));
  const shown=entries.filter(item=>(portfolioFilter==="all"||item.category===portfolioFilter)&&(!q||[item.name,item.description,portfolioLabels[item.category]].join(" ").toLowerCase().includes(q)));
- portfolioGrid.innerHTML=shown.length?shown.map((item)=>{return '<a class="portfolio-card" href="'+item.url+'" target="_blank" rel="noopener noreferrer" aria-label="Open '+item.name+' store in a new tab"><div class="portfolio-card-body"><strong>'+item.name+'</strong><span>'+item.description+'</span><small>'+portfolioLabels[item.category]+' ↗</small></div></a>'}).join(""):'<div class="portfolio-empty">No stores match that search. Try another name or category.</div>';
+ portfolioGrid.innerHTML=shown.length?shown.map((item)=>{
+  const image=item.image?'<div class="portfolio-art"><img src="'+item.image+'" alt="'+item.name+' official homepage imagery" loading="lazy" decoding="async"></div>':'';
+  return '<a class="portfolio-card" href="'+item.url+'" target="_blank" rel="noopener noreferrer" aria-label="Open '+item.name+' store in a new tab">'+image+'<div class="portfolio-card-body"><strong>'+item.name+'</strong><span>'+item.description+'</span><small>'+portfolioLabels[item.category]+' ↗</small></div></a>';
+ }).join(""):'<div class="portfolio-empty">No stores match that search. Try another name or category.</div>';
+ portfolioGrid.querySelectorAll(".portfolio-art img").forEach(img=>img.addEventListener("error",()=>{const art=img.closest(".portfolio-art");if(art){art.classList.add("image-unavailable");img.remove()}},{once:true}));
 }
 document.querySelectorAll(".portfolio-filter").forEach(button=>button.addEventListener("click",()=>{portfolioFilter=button.dataset.filter;document.querySelectorAll(".portfolio-filter").forEach(b=>{const active=b===button;b.classList.toggle("active",active);b.setAttribute("aria-pressed",String(active))});renderPortfolio()}));
 portfolioSearch.addEventListener("input",renderPortfolio);
