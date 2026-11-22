@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#100d1d">
+<meta name="description" content="Explore Abrabal Agency's portfolio of eCommerce store inspiration, digital experiences and brand UGC video content.">
+<meta property="og:title" content="Portfolio | Abrabal Agency"><meta property="og:description" content="Explore store inspiration, digital experiences and creator-led brand content.">
+<link rel="canonical" href="https://timileyinadekunle17-dev.github.io/Abrabal-Agency/portfolio.html"><title>Portfolio | Abrabal Agency — Work That Moves Brands Forward</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="pages.css">
+<style>
+/* Inspiration portfolio */
+.portfolio-section{background:#faf9f6;color:#171426;padding:86px 0 92px}
+.portfolio-heading{text-align:center;max-width:700px;margin:0 auto 30px}
+.portfolio-heading h2{font-size:clamp(34px,4vw,46px);letter-spacing:-1.7px;margin:0 0 14px}
+.portfolio-heading p{font-size:12px;line-height:1.7;color:#686378;margin:0 auto;max-width:540px}
+.portfolio-stats{display:grid;grid-template-columns:repeat(3,minmax(120px,138px));justify-content:center;gap:18px;margin:30px auto 32px}
+.portfolio-stat{background:#fff;border-radius:10px;padding:17px 12px;text-align:center;box-shadow:0 5px 18px #1d17300a}
+.portfolio-stat b{display:block;font-size:25px;line-height:1.2;color:#f5a400}
+.portfolio-stat span{font-size:10px;color:#686378}
+.portfolio-controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 22px}
+.portfolio-filters{display:flex;flex-wrap:wrap;gap:7px;flex:1}
+.portfolio-filter{border:0;border-radius:22px;padding:10px 15px;background:#171f31;color:#fff;font-size:10px;font-weight:800;cursor:pointer;transition:background .2s,transform .2s}
+.portfolio-filter:hover{transform:translateY(-1px)}
+.portfolio-filter.active{background:#ffb812;color:#171426;box-shadow:0 5px 14px #e9a50040}
+.portfolio-search{width:190px;max-width:100%;border:1px solid #d1ced8;border-radius:22px;background:#fff;padding:10px 13px;font:11px "DM Sans",Arial,sans-serif;color:#171426}
+.portfolio-count{margin-top:14px;text-align:center;color:#686378;font-size:12px;font-weight:700;letter-spacing:.02em}
+.portfolio-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.portfolio-card{display:block;min-width:0;border-radius:9px;overflow:hidden;background:#fff;border:1px solid #e9e6e1;box-shadow:0 3px 12px #21182b08;transition:transform .2s,box-shadow .2s}
+.portfolio-card:hover{transform:translateY(-4px);box-shadow:0 12px 25px #21182b16}
+.portfolio-art{height:168px;padding:0;display:block;overflow:hidden;background:#eee9f2}.portfolio-art.image-unavailable{display:grid;place-items:center;background:#eee9f2}.portfolio-art.image-unavailable:after{content:'Store image unavailable';font-size:10px;color:#777183}.portfolio-art img{display:block;width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .35s}.portfolio-card:hover .portfolio-art img{transform:scale(1.035)}
+.portfolio-browser{width:100%;height:100%;border-radius:6px;overflow:hidden;background:#fff;box-shadow:0 5px 16px #231b2b1c}
+.portfolio-browserbar{height:13px;background:#191d2b;display:flex;align-items:center;gap:3px;padding:0 6px}
+.portfolio-browserbar i{display:block;width:4px;height:4px;border-radius:50%;background:#d4c7b4}
+.portfolio-cover{height:calc(100% - 13px);padding:13px 10px;background:linear-gradient(135deg,var(--art-a),var(--art-b));position:relative}
+.portfolio-cover:before{content:"";display:block;width:33%;height:4px;border-radius:4px;background:#272239;opacity:.75;margin-bottom:12px}
+.portfolio-cover strong{display:block;max-width:80%;font-size:clamp(11px,1.3vw,17px);line-height:1.05;letter-spacing:-.5px;color:#242036}
+.portfolio-cover span{display:block;width:48%;height:5px;border-radius:4px;background:#fff9;margin-top:9px}
+.portfolio-cover:after{content:"";position:absolute;right:10px;bottom:9px;width:27%;height:35%;border-radius:5px;background:#fff8;box-shadow:-28px 0 0 #fff5}
+.portfolio-card-body{padding:12px 13px 14px}
+.portfolio-card-body strong{display:block;font-size:12px;color:#201b2e;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.portfolio-card-body span{display:block;margin-top:5px;color:#706b7e;font-size:10px}
+.portfolio-card-body small{display:block;margin-top:9px;color:#8051d7;font-size:9px;font-weight:800}
+.portfolio-empty{grid-column:1/-1;text-align:center;padding:35px;color:#686378;font-size:13px}
+.portfolio-disclaimer{text-align:center;margin:18px 0 0;color:#777183;font-size:10px;line-height:1.6}
+@media(max-width:900px){.portfolio-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:680px){.portfolio-section{padding:65px 0}.portfolio-stats{gap:10px;grid-template-columns:repeat(3,minmax(0,1fr))}.portfolio-stat{padding:14px 8px}.portfolio-stat b{font-size:22px}.portfolio-controls{align-items:stretch}.portfolio-filters{flex-basis:100%}.portfolio-search{width:100%}.portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.portfolio-art{height:130px;padding:0}.portfolio-card-body{padding:10px}.portfolio-card-body strong{font-size:11px}}
+@media(max-width:390px){.portfolio-grid{grid-template-columns:1fr}.portfolio-art{height:170px;padding:0}}
+
+
+
+/* Portfolio section typography and count-up animation */
+.portfolio-section{padding:96px 0 104px}
+.portfolio-heading{max-width:860px;margin-bottom:38px}
+.portfolio-heading .eyebrow{font-size:13px;letter-spacing:2px}
+.portfolio-heading h2{font-size:clamp(42px,5vw,58px);line-height:1.08;letter-spacing:-2px;margin:10px 0 18px}
+.portfolio-heading p{max-width:760px;font-size:16px;line-height:1.85;color:#5f5a70}
+.portfolio-stats{grid-template-columns:repeat(3,minmax(150px,180px));gap:20px;margin:38px auto 42px}
+.portfolio-stat{padding:22px 16px;border-radius:14px}
+.portfolio-stat b{font-size:clamp(32px,3vw,40px);font-weight:800;letter-spacing:-1px}
+.portfolio-stat span{font-size:13px;font-weight:700;letter-spacing:.2px}
+.portfolio-filter{font-size:12px;padding:12px 17px}
+.portfolio-search{font-size:13px;padding:12px 16px}
+.portfolio-card-body{padding:15px 16px 17px}
+.portfolio-card-body strong{font-size:14px}
+.portfolio-card-body span{font-size:12px;line-height:1.5}
+.portfolio-card-body small{font-size:10px}
+.portfolio-count{font-size:13px}
+@media(max-width:700px){
+ .portfolio-section{padding:70px 0 76px}
+ .portfolio-heading{margin-bottom:28px}
+ .portfolio-heading h2{font-size:clamp(36px,9vw,46px)}
+ .portfolio-heading p{font-size:15px;line-height:1.8}
+ .portfolio-stats{gap:9px;margin:28px auto 32px;grid-template-columns:repeat(3,minmax(0,1fr))}
+ .portfolio-stat{padding:17px 7px}
+ .portfolio-stat b{font-size:clamp(25px,7vw,32px)}
+ .portfolio-stat span{font-size:11px}
+ .portfolio-filter{font-size:11px;padding:10px 13px}
+}
+@media(prefers-reduced-motion:reduce){.portfolio-stat b{scroll-behavior:auto}}
+
+
+/* UGC video showcase */
+.ugc-section{background:#100d1d;color:#fff;padding:92px 0}
+.ugc-heading{max-width:720px;margin:0 auto 42px;text-align:center}
+.ugc-heading .eyebrow{justify-content:center}
+.ugc-heading h2{font-size:clamp(34px,4.5vw,50px);line-height:1.06;letter-spacing:-1.8px;margin:0 0 15px}
+.ugc-heading p{max-width:590px;margin:0 auto;color:#bcb7ca;font-size:14px;line-height:1.8}
+.ugc-grid{display:grid;width:100%;max-width:1080px;margin:0 auto;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch;justify-content:center}
+.ugc-card{display:flex;flex-direction:column;width:100%;min-width:0;overflow:hidden;border:1px solid #ffffff1b;border-radius:17px;background:#19152a;box-shadow:0 12px 30px #0002}
+.ugc-media{position:relative;display:block;width:100%;aspect-ratio:9/8;max-height:none;min-width:0;overflow:hidden;background:radial-gradient(ellipse at 50% 35%,#39205c,#171326 68%)}
+.ugc-media video,.ugc-media iframe{position:absolute;inset:0;display:block;width:100%;min-width:100%;max-width:none;height:100%;min-height:100%;border:0;object-fit:cover;background:#080710}
+.ugc-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:13px;padding:22px;text-align:center;color:#d7c4ff}
+.ugc-placeholder-icon{width:58px;height:58px;display:grid;place-items:center;border:1px solid #c39aff65;border-radius:50%;background:#ffffff0c;font-size:24px}
+.ugc-placeholder strong{font-size:14px;color:#fff}
+.ugc-placeholder small{font-size:11px;line-height:1.6;color:#bcb5cd}
+.ugc-card-copy{padding:17px 18px 19px}
+.ugc-card-copy span{display:block;color:#bd91ff;font-size:9px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:7px}
+.ugc-card-copy h3{font-size:15px;margin:0;color:#fff}
+@media(max-width:900px){.ugc-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}}\n@media(max-width:680px){.ugc-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.ugc-section{padding:72px 0}.ugc-card-copy{padding:14px}}
+@media(max-width:420px){.ugc-grid{gap:9px}.ugc-placeholder{padding:12px}.ugc-placeholder strong{font-size:12px}.ugc-placeholder small{font-size:10px}.ugc-card-copy h3{font-size:13px}}
+
+
+.portfolio-hero{position:relative;isolation:isolate;overflow:hidden;padding:86px 0 82px;background:radial-gradient(ellipse at 10% 0%,#56318a 0,transparent 45%),#100d1d;color:#fff}
+.portfolio-hero:before{content:"";position:absolute;z-index:-1;inset:0 0 0 43%;background:linear-gradient(90deg,#100d1d 0%,rgba(16,13,29,.2) 48%,rgba(16,13,29,.12) 100%),url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1500&q=88") center/cover no-repeat;opacity:.78}
+.portfolio-hero:after{content:"";position:absolute;z-index:-1;right:7%;top:15%;width:340px;height:340px;border:1px solid #d0aaff35;border-radius:50%;box-shadow:0 0 0 45px #d0aaff0b,0 0 0 90px #d0aaff08}
+.portfolio-hero-inner{display:grid;grid-template-columns:1.02fr .98fr;gap:46px;align-items:center;min-height:430px}
+.portfolio-hero-copy{max-width:620px}.portfolio-hero .eyebrow{color:#d7b9ff}
+.portfolio-hero h1{font-size:clamp(44px,5.6vw,70px);line-height:1.01;letter-spacing:-2.8px;margin:17px 0 20px;color:#fff}
+.portfolio-hero h1 span{background:linear-gradient(105deg,#d8baff,#a9baff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.portfolio-hero-copy>p{max-width:560px;color:#ded9eb;font-size:15px;line-height:1.85;margin:0}
+.portfolio-hero-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:28px}
+.portfolio-hero .btn-outline{display:inline-flex;padding:12px 19px;border:1px solid #ffffff65;border-radius:30px;color:#fff;font-size:12px;font-weight:800}
+.portfolio-hero-visual{position:relative;min-height:365px;border:1px solid #ffffff30;border-radius:24px;background:linear-gradient(180deg,transparent 40%,rgba(10,7,23,.82)),url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1300&q=88") center/cover;box-shadow:0 24px 70px #0005}
+.portfolio-hero-visual:before{content:"";position:absolute;inset:12px;border:1px solid #ffffff4a;border-radius:16px;pointer-events:none}
+.portfolio-hero-note{position:absolute;left:25px;right:25px;bottom:23px;display:flex;justify-content:space-between;align-items:end;gap:18px;color:#fff}
+.portfolio-hero-note small{display:block;color:#d7b9ff;font-size:9px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:8px}
+.portfolio-hero-note strong{display:block;font-size:22px;line-height:1.15;max-width:290px}
+.portfolio-hero-note em{font-style:normal;font-size:10px;font-weight:800;color:#fff;border:1px solid #ffffff55;border-radius:30px;padding:9px 12px;white-space:nowrap}
+.portfolio-intro-strip{background:#fff;border-bottom:1px solid #ece8f3;padding:25px 0}
+.portfolio-intro-strip .container{display:flex;justify-content:space-between;align-items:center;gap:25px}
+.portfolio-intro-strip p{margin:0;color:#5f5a70;font-size:13px;line-height:1.7;max-width:690px}
+.portfolio-intro-strip strong{color:#241b36;font-size:12px;white-space:nowrap}
+.portfolio-page-cta{padding:75px 0;background:#f7f5fc}.portfolio-page-cta .cta{background:linear-gradient(120deg,#f0e7ff,#e9edff);border-color:#e2d8f1}
+@media(max-width:850px){.portfolio-hero{padding:68px 0}.portfolio-hero-inner{grid-template-columns:1fr;gap:30px}.portfolio-hero:before{inset:0;background-position:center;opacity:.3}.portfolio-hero-visual{min-height:300px}.portfolio-hero h1{max-width:680px}.portfolio-intro-strip .container{align-items:flex-start;flex-direction:column;gap:8px}}
+@media(max-width:650px){.portfolio-hero{padding:65px 0 58px}.portfolio-hero-inner{min-height:0}.portfolio-hero h1{font-size:clamp(42px,11vw,58px);letter-spacing:-2px}.portfolio-hero-copy>p{font-size:13px}.portfolio-hero-visual{min-height:250px;border-radius:18px}.portfolio-hero-note{left:19px;right:19px;bottom:18px}.portfolio-hero-note strong{font-size:18px}.portfolio-intro-strip{padding:20px 0}.portfolio-page-cta{padding:55px 0}}
+</style></head><body>
+<header class="site-header"><div class="header-inner">
+<a class="brand" href="index.html"><img src="assets/logo/Official%20agency%20logo.png" alt="Abrabal Agency logo">Abrabal<br>Agency</a>
+<button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+<nav class="nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html" class="active">Portfolio</a><a href="process.html">Process</a><a href="team.html">Team</a><a href="faqs.html">FAQs</a></nav>
+<a class="btn header-cta" href="https://wa.me/2348081210938">Start a Project ↗</a></div></header>
+<main>
+<section class="portfolio-hero"><div class="container portfolio-hero-inner">
+<div class="portfolio-hero-copy"><span class="eyebrow">ABRABAL AGENCY · SELECTED WORK & INSPIRATION</span><h1>Work That Moves <span>Brands Forward.</span></h1><p>Explore digital storefronts, creative ideas and brand content that show what thoughtful design and clear storytelling can make possible for a business.</p><div class="portfolio-hero-actions"><a class="btn" href="#portfolio">Explore the Portfolio <span aria-hidden="true">↘</span></a><a class="btn-outline" href="#ugc-videos">Watch Brand UGC</a></div></div>
+<div class="portfolio-hero-visual" role="img" aria-label="Modern creative studio workspace"><div class="portfolio-hero-note"><div><small>Ideas into experiences</small><strong>Digital work with purpose.</strong></div><em>Design · Content · Growth</em></div></div>
+</div></section>
+<div class="portfolio-intro-strip"><div class="container"><p>From store inspiration to creator-led videos, explore a range of digital experiences and content formats that can help brands connect with their customers.</p><strong>Discover. Explore. Get inspired.</strong></div></div>
+<section class="portfolio-section" id="portfolio" aria-labelledby="portfolio-title">
+<div class="container">
+<div class="portfolio-heading"><span class="eyebrow">Store Inspiration</span><h2 id="portfolio-title">Our <span class="gradient-text">Portfolio</span></h2><p>Explore 92 real eCommerce businesses across the niches we design for. Each card features a live store to help you discover the style, structure and quality we can bring to your project. Select any card to visit the store in a new tab.</p></div>
+<div class="portfolio-stats" aria-label="Agency results"><div class="portfolio-stat"><b data-count-target="90" data-count-suffix="+">90+</b><span>Projects</span></div><div class="portfolio-stat"><b data-count-target="30" data-count-suffix="+">30+</b><span>Countries</span></div><div class="portfolio-stat"><b data-count-target="90" data-count-suffix="%">90%</b><span>Success Rate</span></div></div>
+<div class="portfolio-controls"><div class="portfolio-filters" role="group" aria-label="Filter store examples">
+<button class="portfolio-filter active" type="button" data-filter="all" aria-pressed="true">All</button>
+<button class="portfolio-filter" type="button" data-filter="shopify" aria-pressed="false">Shopify</button>
+<button class="portfolio-filter" type="button" data-filter="woocommerce" aria-pressed="false">WooCommerce</button>
+<button class="portfolio-filter" type="button" data-filter="wix" aria-pressed="false">Wix</button>
+<button class="portfolio-filter" type="button" data-filter="squarespace" aria-pressed="false">Squarespace</button>
+<button class="portfolio-filter" type="button" data-filter="email" aria-pressed="false">Email Marketing</button>
+<button class="portfolio-filter" type="button" data-filter="seo" aria-pressed="false">SEO</button>
+<button class="portfolio-filter" type="button" data-filter="social" aria-pressed="false">Social Commerce</button>
+<button class="portfolio-filter" type="button" data-filter="dropshipping" aria-pressed="false">Dropshipping</button>
+</div><input class="portfolio-search" type="search" id="portfolio-search" placeholder="⌕  Search stores..." aria-label="Search store examples"></div>
+<div class="portfolio-grid" id="portfolio-grid" aria-live="polite"></div>
+<div class="portfolio-count" id="portfolio-count" aria-live="polite">Showing 92 of 92 niches</div>
+
+</div></section>
+
+
+<section class="ugc-section" id="ugc-videos" aria-labelledby="ugc-title">
+ <div class="container">
+  <div class="ugc-heading">
+   <span class="eyebrow">Real Content · Real Connections</span>
+   <h2 id="ugc-title">UGC Videos That <span class="gradient-text">Bring Brands to Life.</span></h2>
+   <p>See how authentic, creator-led video content can help products connect with people, build trust and inspire action.</p>
+  </div>
+  <div class="ugc-grid" id="ugc-video-grid">
+   <article class="ugc-card"><div class="ugc-media" data-ugc-slot="1"><div class="ugc-placeholder"><span class="ugc-placeholder-icon" aria-hidden="true">▶</span><strong>UGC Video 01</strong><small>Video slot ready — add your MP4, YouTube or Vimeo link in the UGC video list.</small></div></div><div class="ugc-card-copy"><span>Brand's UGC · 01</span><h3>A Cleaner Way to Care for Your Home</h3></div></article>
+   <article class="ugc-card"><div class="ugc-media" data-ugc-slot="2"><div class="ugc-placeholder"><span class="ugc-placeholder-icon" aria-hidden="true">▶</span><strong>UGC Video 02</strong><small>Video slot ready — add your MP4, YouTube or Vimeo link in the UGC video list.</small></div></div><div class="ugc-card-copy"><span>Brand's UGC · 02</span><h3>Product Stories That Feel Personal</h3></div></article>
+   <article class="ugc-card"><div class="ugc-media" data-ugc-slot="3"><div class="ugc-placeholder"><span class="ugc-placeholder-icon" aria-hidden="true">▶</span><strong>UGC Video 03</strong><small>Video slot ready — add your MP4, YouTube or Vimeo link in the UGC video list.</small></div></div><div class="ugc-card-copy"><span>Brand's UGC · 03</span><h3>Show the Product in Real Life</h3></div></article>
+   <article class="ugc-card"><div class="ugc-media" data-ugc-slot="4"><div class="ugc-placeholder"><span class="ugc-placeholder-icon" aria-hidden="true">▶</span><strong>UGC Video 04</strong><small>Video slot ready — add your MP4, YouTube or Vimeo link in the UGC video list.</small></div></div><div class="ugc-card-copy"><span>Brand's UGC · 04</span><h3>Authentic Moments, Stronger Connection</h3></div></article>
+   <article class="ugc-card"><div class="ugc-media" data-ugc-slot="5"><div class="ugc-placeholder"><span class="ugc-placeholder-icon" aria-hidden="true">▶</span><strong>UGC Video 05</strong><small>Video slot ready — add your MP4, YouTube or Vimeo link in the UGC video list.</small></div></div><div class="ugc-card-copy"><span>Brand's UGC · 05</span><h3>Make Everyday Benefits Easy to See</h3></div></article>
+   <article class="ugc-card"><div class="ugc-media" data-ugc-slot="6"><div class="ugc-placeholder"><span class="ugc-placeholder-icon" aria-hidden="true">▶</span><strong>UGC Video 06</strong><small>Video slot ready — add your MP4, YouTube or Vimeo link in the UGC video list.</small></div></div><div class="ugc-card-copy"><span>Brand's UGC · 06</span><h3>Content That Brings Brands to Life</h3></div></article>
+  </div>
+ </div>
+</section>
+<section class="portfolio-page-cta"><div class="container"><div class="cta"><div><h2>Have a Project in Mind?</h2><p>Let's create a digital experience and content that moves your brand forward.</p></div><a class="btn" href="https://wa.me/2348081210938">Let's Talk ↗</a></div></div></section>
+</main>
+<footer class="footer"><div class="container"><div class="footer-inner"><a class="brand" href="index.html"><img src="assets/logo/Official%20agency%20logo.png" alt="">Abrabal Agency</a><nav class="footer-links"><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="process.html">Process</a><a href="team.html">Team</a><a href="faqs.html">FAQs</a><a href="mailto:abrabalagency@gmail.com">Email</a></nav></div><p>Your Growth. Our Mission. Digital experiences and creative marketing to help businesses grow.</p><div class="copyright">© <span id="year">2026</span> Abrabal Agency. All rights reserved.</div></div></footer>
+<script src="pages.js"></script><script>
+const portfolioData={
+shopify:[
+["Hiut Denim","https://hiutdenim.co.uk","Independent denim maker"],
+["Tentree","https://www.tentree.com","Sustainable clothing"],
+["Maguire Shoes","https://maguireshoes.com","Independent footwear label"],
+["Adored Vintage","https://www.adoredvintage.com","Vintage-inspired fashion boutique"],
+["Goodfair","https://www.goodfair.com","Secondhand clothing"],
+["The Outrage","https://www.the-outrage.com","Independent graphic apparel"],
+["Taza Chocolate","https://www.tazachocolate.com","Craft chocolate maker"],
+["Flourist","https://flourist.com","Flour, grains & pantry goods"],
+["The Honey Pot","https://thehoneypot.co","Feminine care products"],
+["Package Free","https://packagefreeshop.com","Low-waste home & personal care"],
+["Beauty Bakerie","https://beautybakerie.com","Independent cosmetics"],
+["Cheekbone Beauty","https://www.cheekbonebeauty.com","Indigenous-owned cosmetics"],
+["Lucy & Yak","https://lucyandyak.com","Independent, employee-owned ethical clothing brand"],
+["Appointed","https://appointed.co","American-made planners, notebooks & stationery"],
+["LastObject","https://lastobject.com","Reusable personal care and low-waste essentials"]
+],
+woocommerce:[
+["gruum","https://www.gruum.com","Personal care"],
+["Claudia Pearson","https://claudiapearson.com","Illustration, home art & gifts"],
+["No Pong","https://www.nopong.com","Natural deodorant"],
+["Landyachtz","https://landyachtz.com","Skateboards & bikes"],
+["Cora + Spink","https://coraandspink.com","Apparel & accessories"],
+["Rodeo Adventure Labs","https://rodeo-labs.com","Outdoor equipment"],
+["Green Mountain Grills","https://greenmountaingrills.com","Outdoor cooking equipment"],
+["Kinfolk","https://www.kinfolk.com","Independent publishing & goods"],
+["Universal Yums","https://www.universalyums.com","Snack subscription boxes"],
+["Chania Honey","https://chania-honey.gr","Local honey producer"]
+],
+wix:[
+["Izzy Wheels","https://www.izzywheels.com","Wheelchair wheel covers & accessories"],
+["Bestie Hugs","https://www.bestiehugs.com","Handmade weighted comfort products"],
+["Festela Store","https://www.festelastore.com","Handmade slow-fashion clothing"],
+["LemonTree + Co.","https://www.lemontreeandco.com","Home décor & lifestyle shop"],
+["Nue Modern","https://nue-modern.com","Modern furniture & lighting"],
+["Tach Clothing","https://www.tachclothing.com","Independent fashion label"],
+["Scandinazn","https://www.scandinazn.com","Artist-made statement jewellery"],
+["The Mighty Spice Co.","https://www.themightyspice.co","Small-batch curry pastes"],
+["Seesucht Manufaktur","https://www.seesucht-manufaktur.de","Founder-made homeware & gifts"],
+["STL-Style","https://www.stl-style.com","Locally designed apparel & gifts"],
+["Island Hoppers Art","https://www.islandhoppersart.com","Artist-owned prints & fine art"],
+["Lili Arnold","https://www.liliarnold.com","Artist-made prints & accessories"]
+],
+squarespace:[
+["Frankly Good Coffee","https://franklygoodcoffee.com","Independent coffee roaster"],
+["Hôtel Weekend","https://hotel-weekend.com","Independent hospitality & goods"],
+["Memor","https://shopmemor.com","Home & lifestyle goods"],
+["The Sorry Girls","https://thesorrygirls.com","Creative lifestyle & home goods"],
+["One Magazine","https://onemag.us","Independent magazine & goods"],
+["Fat Choy","https://fatchoynyc.com","Independent food business"],
+["Not Work Related","https://shopnotworkrelated.com","Independent apparel"],
+["Sunnie","https://wearesunnie.com","Lifestyle & home goods"],
+["Dreamsake","https://dreamsake.co","Independent sake brand"],
+["Nerine Floral","https://nerine-floral.squarespace.com","Florist & gift shop"],
+["Flaneur Magazine","https://flaneur-magazine.com","Independent magazine & shop"]
+],
+email:[
+["Satya","https://satya.ca","Founder-led skincare"],
+["Teddy Baldassarre","https://teddybaldassarre.com","Watches and accessories"],
+["Schoolhouse","https://schoolhouse.com","Lighting, furniture and home accessories"],
+["Cult Store","https://cultstore.com","Sports and lifestyle equipment"],
+["Martie","https://martie.com","Food and beverage marketplace"],
+["Cardo Systems","https://cardosystems.com","Motorcycle communication accessories"],
+["Ritual","https://ritual.com","Health and wellness products"],
+["Negative Underwear","https://negativeunderwear.com","Lingerie and essentials"],
+["Rothy’s","https://rothys.com","Sustainable footwear and accessories"]
+],
+seo:[
+["Tofino Soap Company","https://tofinosoapcompany.com","Handmade soap & body care"],
+["Bella Vita Organic","https://bellavitaorganic.com","Skincare, beauty and fragrance"],
+["Gantri","https://www.gantri.com","Design-led lighting"],
+["Takomo Golf","https://takomogolf.com","Golf clubs and equipment"],
+["Blue Bottle Coffee","https://bluebottlecoffee.com","Specialty coffee and subscriptions"],
+["Nobl Travel","https://nobltravel.com","Travel gear and luggage"],
+["Primal Queen","https://primalqueen.com","Women’s wellness supplements"],
+["Cult Gaia","https://cultgaia.com","Luxury fashion, swimwear and accessories"],
+["Atolea Jewelry","https://atoleajewelry.com","Waterproof jewelry and accessories"],
+["Raycon","https://rayconglobal.com","Audio and personal tech"],
+["Meller","https://mellerbrand.com","Eyewear and sunglasses"],
+["Simplehuman","https://simplehuman.com","Premium home and bathroom accessories"]
+],
+social:[
+["Meow Meow Tweet","https://meowmeowtweet.com","Small-batch personal care"],
+["Tarte Cosmetics","https://tartecosmetics.com","Cosmetics, makeup and skincare"],
+["Our Place","https://fromourplace.com","Kitchen and dining products"],
+["Tifosi Optics","https://tifosioptics.com","Cycling and performance eyewear"],
+["Art of Tea","https://artoftea.com","Premium loose-leaf tea and tea accessories"],
+["KastKing","https://kastking.com","Fishing gear and equipment"],
+["Kopari Beauty","https://koparibeauty.com","Clean beauty and personal care"],
+["Organic Basics","https://organicbasics.com","Sustainable activewear and essentials"],
+["Hatch Collection","https://hatchcollection.com","Maternity clothing and essentials"],
+["Fender","https://fender.com","Musical instruments and equipment"],
+["Mouth","https://mouth.com","Artisan food and gourmet gifts"],
+["Parachute","https://parachutehome.com","Bedding, bath and bedroom accessories"]
+],
+dropshipping:[
+["Doki Doki Cosmetics","https://dokidokicos.com","Haircare and beauty products"],
+["SilkSilky","https://silksilky.com","Silk bedding and sleep essentials"],
+["Shokz","https://shokz.com","Open-ear audio for running and sport"],
+["Compartés","https://compartes.com","Gourmet chocolate and sweets"],
+["Lancaster Archery Supply","https://lancasterarchery.com","Archery and outdoor hunting gear"],
+["Quip","https://quip.com","Oral and dental care"],
+["The House of Rare","https://thehouseofrare.com","Fashion and lifestyle"],
+["Wanderprints","https://wanderprints.com","Personalized gifts for families"],
+["Papier","https://papier.com","Books, stationery and journals"],
+["Frost Buddy","https://frostbuddy.com","Drinkware and beverage accessories"],
+["Blackstone Products","https://blackstoneproducts.com","Outdoor griddles and cooking equipment"]
+]
+};
+const portfolioLabels={shopify:"Shopify",woocommerce:"WooCommerce",wix:"Wix",squarespace:"Squarespace",email:"Email marketing inspiration",seo:"SEO & discovery inspiration",social:"Social commerce inspiration",dropshipping:"Dropshipping inspiration"};
+const portfolioImages={
+"Tentree":"https://www.tentree.com/cdn/shop/files/FW26_FallLaunch1_Homepage_Desktop1_FA.jpg?v=1784829546&width=2000",
+"Taza Chocolate":"https://www.tazachocolate.com/cdn/shop/files/Taza_Spring_Header_Desktop.jpg?v=1777907518",
+"Flourist":"https://flourist.com/cdn/shop/files/615A8014_beb074f1-db52-4d8e-a7ff-17650835c4de.jpg?v=1782318996&width=1920",
+"Package Free":"https://packagefreeshop.com/cdn/shop/files/Hero_Desktop.jpg?v=1774985604&width=3840",
+"Tofino Soap Company":"https://tofinosoapcompany.com/cdn/shop/files/heart_handcrafted.png?v=1733429071&width=1420",
+"Izzy Wheels":"https://static.wixstatic.com/media/38036e_d8e9bf6a87f74a5faa5192aec6e8dd8e~mv2.jpg/v1/fill/w_980%2Ch_640%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/38036e_d8e9bf6a87f74a5faa5192aec6e8dd8e~mv2.jpg",
+"Frankly Good Coffee":"https://images.squarespace-cdn.com/content/v1/638b92a6785e905478e283b0/bfb76a10-5808-4045-9238-798885f523f1/2407FranklyGoodCoffee-Q3ProductShots-TheMeadowStudios-8-min.jpg",
+"Universal Yums":"https://www.universalyums.com/wp-content/uploads/2026/02/Box-of-the-month-768x742.jpg",
+"No Pong":"https://www.nopong.com.au/wp-content/uploads/2026/07/background-Spearmint-breeze.gif"
+,"Bestie Hugs":"https://static.wixstatic.com/media/ac885c_8cc9812df7ac427e82a1d7857faeac15~mv2.jpg/v1/crop/x_11%2Cy_101%2Cw_1483%2Ch_590/fill/w_1447%2Ch_590%2Cal_c%2Cq_85%2Cenc_avif%2Cquality_auto/ac885c_8cc9812df7ac427e82a1d7857faeac15~mv2.jpg"
+,"Festela Store":"https://static.wixstatic.com/media/f23a2c_566adcac72454e86b150ddc7c9793fe2~mv2.jpg/v1/crop/x_266%2Cy_0%2Cw_1467%2Ch_2000/fill/w_427%2Ch_582%2Cal_c%2Cq_80%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/Trickle_sudadera_festela_mujer.jpg"
+,"Nue Modern":"https://static.wixstatic.com/media/42bcf7_2316fcaf683a4300a8b1377b4ab222b0~mv2.jpeg/v1/fill/w_980%2Ch_571%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/Mario_Bellini_Le_Mura_sofas.jpeg"
+,"Scandinazn":"https://static.wixstatic.com/media/fdd37b_22b009e866e04e689d7889c2e59eef8c~mv2.jpg/v1/fill/w_911%2Ch_717%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/fdd37b_22b009e866e04e689d7889c2e59eef8c~mv2.jpg"
+,"LemonTree + Co.":"https://static.wixstatic.com/media/b34c67_54fc79ba248f4f7b9b0f290e1072ba65f000.jpg/v1/fill/w_980%2Ch_551%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/b34c67_54fc79ba248f4f7b9b0f290e1072ba65f000.jpg"
+,"The Mighty Spice Co.":"https://static.wixstatic.com/media/741e39_86807673746746e199928a7abd509a78~mv2.jpg/v1/fill/w_980%2Ch_653%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/741e39_86807673746746e199928a7abd509a78~mv2.jpg"
+,"Island Hoppers Art":"https://static.wixstatic.com/media/8e7435_bff84a4ae09f4072ba74257a70d27970~mv2.jpg/v1/fill/w_980%2Ch_1307%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/8e7435_bff84a4ae09f4072ba74257a70d27970~mv2.jpg"
+,"Memor":"https://images.squarespace-cdn.com/content/v1/6508851c94ca852bce4f1e6c/1695060462719-GWAO3AGFH69N2QYZQ59U/memor.jpeg"
+,"Nerine Floral":"https://images.squarespace-cdn.com/content/v1/677724d7bab645666bd2d462/f679e068-13aa-4827-bc69-a9451c664a2e/spirit-tea-10-year-anniversary_54851290135_o2.jpg"
+,"The Honey Pot":"https://thehoneypot.co/cdn/shop/files/11ProductWholeBodyDeo_4f86568f-44bf-4ad3-a743-d436bcf26e66.png?v=1764809711&width=900"
+,
+"Hiut Denim":"https://cdn.shopify.com/s/files/1/0070/7032/files/shopify-store-huit.png?v=1694801744",
+"Maguire Shoes":"https://cdn.shopify.com/s/files/1/0070/7032/files/shopify-store-macguire.png?v=1694801801",
+"Adored Vintage":"https://cdn.shopify.com/s/files/1/0070/7032/files/shopify-store-adored.png?v=1694801846",
+"Beauty Bakerie":"https://cdn.shopify.com/s/files/1/0070/7032/files/shopify-store-bakerie.png?v=1694804751",
+"The Outrage":"https://cdn.shopify.com/s/files/1/0628/0976/7978/files/image14_907a501a-59c2-4057-8af2-a529d706d79e.png?v=1732109711",
+"Goodfair":"https://cdn.shopify.com/s/files/1/0070/7032/files/shopify-store-goodfair.png?v=1694801871"
+,
+"Cheekbone Beauty":"https://www.cheekbonebeauty.com/cdn/shop/files/Uprise_website_mobile_1.png?v=1784914712&width=320"
+,
+"gruum":"https://www.gruum.com/wp-content/uploads/2021/03/daily_defence_lotion_3-new-jpg.webp"
+,
+"Landyachtz":"https://landyachtz.com/wp-content/uploads/2026/02/Schooner-Skull-Jam-01-WEB-600x600.jpg"
+,
+"Kinfolk":"https://ik.imagekit.io/kinfolk/wp-content/uploads/2026/08/HomeTour_Sphinx_Hill_03.jpg"
+
+,
+"Rodeo Adventure Labs":"https://rodeo-labs.com/wp-content/uploads/2026/05/TD42_3-4_hero.jpg"
+,
+"Hôtel Weekend":"https://images.squarespace-cdn.com/content/v1/5f92e6a8f280936498f67166/1780265662411-XJY7FVUHY59Y373Q7B3F/Callemant%2BD%2Bautane%2Bhotel%2Bweekend%2Bprovence%2Bslow%2Btravel%2B%2B5.jpg"
+,
+"Green Mountain Grills":"https://www.greenmountaingrills.com/wp-content/uploads/2023/10/LEDGE-PRIME2.0.jpg"
+,
+"Tach Clothing":"https://static.wixstatic.com/media/486bd5_dbcf9b23bf844aad8df756dc2109bfa8~mv2.jpg/v1/fit/w_742%2Ch_495%2Cq_90%2Cenc_avif%2Cquality_auto/486bd5_dbcf9b23bf844aad8df756dc2109bfa8~mv2.jpg"
+,
+"The Sorry Girls":"https://images.squarespace-cdn.com/content/v1/64a5a7faffc56f03300b8c19/c47bf566-09cd-4185-8ead-d3b3e01ecca0/164C9208-Edit.jpg"
+,
+"One Magazine":"https://images.squarespace-cdn.com/content/v1/521fae1fe4b06c4305d99f0a/1730166363047-NIU4PHJGPWS456W3JX89/ONE_NO19-Cameron-Cover_web.jpg"
+,
+"Seesucht Manufaktur":"https://static.wixstatic.com/media/c92bf7_a5fe08a4cda045d7a61982236aefa6ed~mv2.jpg/v1/fill/w_980%2Ch_451%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/c92bf7_a5fe08a4cda045d7a61982236aefa6ed~mv2.jpg"
+,
+"STL-Style":"https://static.wixstatic.com/media/a92806_6af1951855ca4c9898b079df5221dd9c~mv2.jpg/v1/fill/w_980%2Ch_784%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/a92806_6af1951855ca4c9898b079df5221dd9c~mv2.jpg"
+,
+"Meow Meow Tweet":"https://meowmeowtweet.com/cdn/shop/products/R-STCK-webtrans_3000x.png?v=1667503587"
+,
+"Flaneur Magazine":"https://images.squarespace-cdn.com/content/v1/62cb3ac14f85f60deef64625/70e3243d-42fd-4fc4-954c-95aac3b5d5c1/feliperusso_13maio_02_03.jpg"
+,
+"Claudia Pearson":"https://claudiapearson.com/wp-content/uploads/2025/05/MEETCLAUDIA.jpg"
+,
+"Cora + Spink":"https://coraandspink.com/wp-content/uploads/2025/11/Cora-Spink-Otter-Sack-5-of-7-800x1067.webp"
+,
+"Dreamsake":"https://images.squarespace-cdn.com/content/v1/66f43106c1c8cb711027187b/fc9f5188-f709-47d1-ad45-9197a637d023/DREAMSAKE%2BDelivery%2B2%2B5.jpg"
+,
+"Not Work Related":"https://images.squarespace-cdn.com/content/v1/600ca74c3c156d341b536404/5c73cd75-bd22-46e0-ae64-db3b06c15fd0/jun26dayof-440.png"
+,
+"Sunnie":"https://images.squarespace-cdn.com/content/v1/67dc455cc82e83547e88c641/616348ce-4ca7-4719-9f2f-93e6587a62d3/header.png"
+,
+"Satya":"https://satya.ca/cdn/shop/files/Ingredients_-_01.png?v=1677090941&width=1418"
+,
+"Chania Honey":"https://www.chania-honey.gr/wp-content/uploads/2021/05/meli_5_web.jpg"
+
+,
+"Lili Arnold":"https://static.wixstatic.com/media/955490_05fb21cf638a46298b4183cc351b612d~mv2.jpeg/v1/fill/w_328%2Ch_342%2Cq_90%2Cusm_1.30_0.19_0.01%2Cenc_avif%2Cquality_auto/955490_05fb21cf638a46298b4183cc351b612d~mv2.jpeg"
+,
+"Fat Choy":"https://images.squarespace-cdn.com/content/v1/5f528d19115beb083cdca263/1602042958491-L4W7R6VK0NM833ZQUQFQ/Rice_Rolls2x.jpg"
+,
+"Lucy & Yak":"https://lucyandyak.com/cdn/shop/files/Iconic-Yaks-Banner-Amended.jpg?v=1714654869&width=1500"
+,
+"Appointed":"https://cdn.shopify.com/s/files/1/0831/9463/files/Notebooks-Journals-Navigation-Menu.jpg?v=1658494523"
+,
+"LastObject":"https://cdn.shopify.com/s/files/1/0229/0839/files/LastObject.jpg?v=1764155243",
+"Bella Vita Organic":"https://bellavitaorganic.com/cdn/shop/files/Mask_Group_616_34fc5435-b516-44d1-bdeb-7ac8103c5c792.webp?v=1725617393&width=800",
+"Gantri":"https://res.cloudinary.com/gantri/image/upload/c_lfill%2Cw_640/q_auto/dpr_auto/f_auto/v1/static-assets/mantle/home/v5/hero/hero-artist-studio-mobile-2x",
+"Takomo Golf":"https://takomogolf.com/cdn/shop/files/Right_col.png?v=1775381486&width=1200",
+"Blue Bottle Coffee":"https://res.cloudinary.com/hbhhv9rz9/image/upload/f_auto%2Cc_limit%2Cw_3840%2Cq_auto/2026/04%20April/April%20W2/HP_APRWK2_M1A_Desktop.jpg",
+"Nobl Travel":"https://nobltravel.com/cdn/shop/files/green_199b9f20-843e-479f-a0ba-a1d858190627.webp?v=1776704179&width=1445",
+"Primal Queen":"https://primalqueen.com/cdn/shop/files/Frame_19.png?v=1793286521&width=374",
+"Cult Gaia":"https://cultgaia.com/cdn/shop/files/HP_Desktop_Hero-1_80982bb5-38f0-4904-9f10-6149421566a4.jpg?v=1786343467&width=3200",
+"Atolea Jewelry":"https://atoleajewelry.com/cdn/shop/products/baroque-freshwater-pearl-necklace.jpg?v=1756155149&width=1080",
+"Raycon":"https://rayconglobal.com/cdn/shop/files/Group_9.png?v=1780413638&width=600",
+"Meller":"https://mellerbrand.com/cdn/shop/files/logo-new_480x.png?v=1651073398",
+"Simplehuman":"https://cdn.shopify.com/s/files/1/2804/6630/files/sensor-pump-9-menu-nav.png?v=1775068668",
+"Teddy Baldassarre":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://teddybaldassarre.com",
+"Schoolhouse":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://schoolhouse.com",
+"Cult Store":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://cultstore.com",
+"Martie":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://martie.com",
+"Cardo Systems":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://cardosystems.com",
+"Ritual":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://ritual.com",
+"Negative Underwear":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://negativeunderwear.com",
+"Rothy’s":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://rothys.com",
+"Tarte Cosmetics":"https://images.ctfassets.net/cce4tcns2qc3/XHpiN6ff7Ky9g1fK2luc5/eac05e446ea1dd295eb60a48c209d95f/Tarte_Cosmetics.jpg",
+"Our Place":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://fromourplace.com",
+"Tifosi Optics":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://tifosioptics.com",
+"Art of Tea":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://artoftea.com",
+"KastKing":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://kastking.com",
+"Kopari Beauty":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://koparibeauty.com",
+"Organic Basics":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://organicbasics.com",
+"Hatch Collection":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://hatchcollection.com",
+"Fender":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://fender.com",
+"Mouth":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://mouth.com",
+"Parachute":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://parachutehome.com",
+"Doki Doki Cosmetics":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://dokidokicos.com",
+"SilkSilky":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://silksilky.com",
+"Shokz":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://shokz.com",
+"Compartés":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://compartes.com",
+"Lancaster Archery Supply":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://lancasterarchery.com",
+"Quip":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://quip.com",
+"The House of Rare":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://thehouseofrare.com",
+"Wanderprints":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://wanderprints.com",
+"Papier":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://papier.com",
+"Frost Buddy":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://frostbuddy.com",
+"Blackstone Products":"https://image.thum.io/get/width/1200/crop/800/noanimate/https://blackstoneproducts.com"
+};
+const portfolioGrid=document.querySelector("#portfolio-grid");
+const portfolioSearch=document.querySelector("#portfolio-search");
+let portfolioFilter="all";
+const portfolioPalette=[["#ffe5b8","#ffbd8d"],["#e2e7ff","#c8d2ff"],["#f7d9e6","#e8c5ff"],["#d8efe6","#b7ddd2"],["#f3e4d1","#e8d5bd"],["#e7dff8","#c7b9ef"]];
+function renderPortfolio(){
+ const q=portfolioSearch.value.trim().toLowerCase();
+ const entries=Object.entries(portfolioData).flatMap(([category,items])=>items.map(([name,url,description],index)=>({category,name,url,description,index,image:portfolioImages[name]})));
+ const categoryEntries=entries.filter(item=>portfolioFilter==="all"||item.category===portfolioFilter);
+ const shown=categoryEntries.filter(item=>!q||[item.name,item.description,portfolioLabels[item.category]].join(" ").toLowerCase().includes(q));
+ document.querySelector("#portfolio-count").textContent="Showing "+shown.length+" of "+categoryEntries.length+" niches";
+ portfolioGrid.innerHTML=shown.length?shown.map((item)=>{
+  const image=item.image?'<div class="portfolio-art"><img src="'+item.image+'" alt="'+item.name+' official homepage imagery" loading="lazy" decoding="async"></div>':'';
+  return '<a class="portfolio-card" href="'+item.url+'" target="_blank" rel="noopener noreferrer" aria-label="Open '+item.name+' store in a new tab">'+image+'<div class="portfolio-card-body"><strong>'+item.name+'</strong><span>'+item.description+'</span><small>'+portfolioLabels[item.category]+' ↗</small></div></a>';
+ }).join(""):'<div class="portfolio-empty">No stores match that search. Try another name or category.</div>';
+ portfolioGrid.querySelectorAll(".portfolio-art img").forEach(img=>img.addEventListener("error",()=>{const art=img.closest(".portfolio-art");if(art){art.classList.add("image-unavailable");img.remove()}},{once:true}));
+}
+document.querySelectorAll(".portfolio-filter").forEach(button=>button.addEventListener("click",()=>{portfolioFilter=button.dataset.filter;document.querySelectorAll(".portfolio-filter").forEach(b=>{const active=b===button;b.classList.toggle("active",active);b.setAttribute("aria-pressed",String(active))});renderPortfolio()}));
+portfolioSearch.addEventListener("input",renderPortfolio);
+renderPortfolio();
+
+// Count-up metrics: animate once when the portfolio enters the viewport.
+(function(){
+ const stats=document.querySelector("#portfolio .portfolio-stats");
+ if(!stats) return;
+ const counters=[...stats.querySelectorAll("[data-count-target]")];
+ let started=false;
+ const runCounters=()=>{
+  if(started) return;
+  started=true;
+  const reduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  counters.forEach(counter=>{
+   const target=Number(counter.dataset.countTarget);
+   const suffix=counter.dataset.countSuffix||"";
+   if(reduced){counter.textContent=target+suffix;return;}
+   const duration=1500;
+   const start=performance.now();
+   const tick=now=>{
+    const progress=Math.min((now-start)/duration,1);
+    const eased=1-Math.pow(1-progress,4);
+    counter.textContent=Math.round(target*eased)+suffix;
+    if(progress<1) requestAnimationFrame(tick);
+   };
+   counter.textContent="0"+suffix;
+   requestAnimationFrame(tick);
+  });
+ };
+ if("IntersectionObserver" in window){
+  const observer=new IntersectionObserver(entries=>{
+   if(entries.some(entry=>entry.isIntersecting)){runCounters();observer.disconnect();}
+  },{threshold:0.25});
+  observer.observe(stats);
+ }else{runCounters();}
+})();
+
+
+
+// Add your six video URLs below. Supports direct MP4 links and YouTube/Vimeo share links.
+// Leave a slot as an empty string until its video is ready.
+const UGC_VIDEOS = [
+ "assets/ugc-videos/VID-20261113-WA0276.mp4",
+ "assets/ugc-videos/VID-20261113-WA0272.mp4",
+ "assets/ugc-videos/VID-20261113-WA0277.mp4",
+ "assets/ugc-videos/VID-20261113-WA0268.mp4",
+ "assets/ugc-videos/VID-20261113-WA0265.mp4",
+ "assets/ugc-videos/VID-20261113-WA0266.mp4"
+];
+function ugcEmbedUrl(url){
+ const youtube = url.match(/(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([\w-]{6,})/);
+ if(youtube) return "https://www.youtube-nocookie.com/embed/"+youtube[1];
+ const vimeo = url.match(/vimeo\.com\/(?:video\/)?(\d+)/);
+ if(vimeo) return "https://player.vimeo.com/video/"+vimeo[1];
+ return "";
+}
+document.querySelectorAll("[data-ugc-slot]").forEach((frame,index)=>{
+ const url=(UGC_VIDEOS[index]||"").trim();
+ if(!url) return;
+ const placeholder=frame.querySelector(".ugc-placeholder");
+ if(/\.mp4(?:$|[?#])/i.test(url)){
+  const video=document.createElement("video");
+  video.controls=true;video.playsInline=true;video.preload="metadata";
+  video.src=url;video.setAttribute("aria-label","Abrabal Agency UGC video "+(index+1));
+  frame.appendChild(video);
+ }else{
+  const embed=ugcEmbedUrl(url);
+  if(!embed) return;
+  const iframe=document.createElement("iframe");
+  iframe.src=embed;iframe.title="Abrabal Agency UGC video "+(index+1);
+  iframe.allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+  iframe.allowFullscreen=true;frame.appendChild(iframe);
+ }
+ if(placeholder) placeholder.remove();
+});
+
+
+document.querySelector("#year").textContent=new Date().getFullYear();
+</script></body></html>
