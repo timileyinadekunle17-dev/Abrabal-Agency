@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+<title id="title">UGC video production setup</title>
+<desc id="desc">An illustrated creator filming a skincare product review with a smartphone on a tripod in a bright home studio.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#211638"/><stop offset="1" stop-color="#6742a2"/></linearGradient>
+ <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff7ee"/><stop offset="1" stop-color="#e8dafa"/></linearGradient>
+ <linearGradient id="shirt" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c5a4f0"/><stop offset="1" stop-color="#8a61c4"/></linearGradient>
+ <linearGradient id="bottle" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#d6a56b"/><stop offset=".5" stop-color="#f4d3a1"/><stop offset="1" stop-color="#b87b4a"/></linearGradient>
+ <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#120c20" flood-opacity=".22"/></filter>
+ </defs>
+ <rect width="1200" height="800" fill="url(#bg)"/>
+ <circle cx="1010" cy="130" r="190" fill="#a987df" opacity=".18"/><circle cx="140" cy="690" r="230" fill="#d4b6ff" opacity=".12"/>
+ <rect x="90" y="76" width="1020" height="648" rx="34" fill="url(#panel)" filter="url(#shadow)"/>
+ <rect x="130" y="118" width="940" height="486" rx="22" fill="#f7f1ed"/>
+ <rect x="165" y="150" width="255" height="310" rx="16" fill="#d7e8e4"/>
+ <path d="M165 310 Q290 205 420 310 V460 H165Z" fill="#b8d2c8"/>
+ <path d="M190 460 Q220 340 300 350 Q380 350 405 460Z" fill="#7caa91"/>
+ <path d="M235 215 Q260 170 290 215 M300 245 Q335 190 360 245" fill="none" stroke="#8eb6a2" stroke-width="13" stroke-linecap="round"/>
+ <rect x="438" y="150" width="594" height="310" rx="18" fill="#f1e8df"/>
+ <path d="M438 372 Q600 300 740 375 T1032 350 V460 H438Z" fill="#e5d4c6"/>
+ <rect x="478" y="186" width="170" height="150" rx="14" fill="#fff" opacity=".65"/>
+ <path d="M505 300 Q560 215 620 300" fill="none" stroke="#d7c2e8" stroke-width="12"/>
+ <!-- creator -->
+ <ellipse cx="625" cy="411" rx="105" ry="28" fill="#d3c1b4" opacity=".55"/>
+ <path d="M520 392 Q525 300 595 288 Q675 275 725 354 L760 520 H485Z" fill="url(#shirt)"/>
+ <path d="M550 294 Q535 230 580 196 Q642 150 690 202 Q720 235 695 303 L672 342 H565Z" fill="#39283b"/>
+ <ellipse cx="626" cy="251" rx="67" ry="78" fill="#c98562"/>
+ <path d="M558 246 Q553 167 625 166 Q700 165 705 247 Q681 213 651 208 Q608 238 558 246Z" fill="#39283b"/>
+ <path d="M582 260 Q594 267 606 260 M647 260 Q660 267 673 259" fill="none" stroke="#593b36" stroke-width="6" stroke-linecap="round"/>
+ <path d="M613 293 Q628 303 646 291" fill="none" stroke="#8e4e4b" stroke-width="5" stroke-linecap="round"/>
+ <path d="M527 390 Q480 410 468 470 L510 500 L563 426" fill="#c98562"/>
+ <path d="M704 380 Q750 392 770 450 L738 478 L681 418" fill="#c98562"/>
+ <!-- product in hand -->
+ <rect x="728" y="362" width="42" height="86" rx="10" fill="url(#bottle)" stroke="#a66e48" stroke-width="3"/>
+ <rect x="738" y="345" width="22" height="22" rx="4" fill="#5a4663"/>
+ <rect x="735" y="390" width="28" height="28" rx="4" fill="#fff5e9"/>
+ <!-- phone tripod -->
+ <path d="M890 420 L850 630 M890 420 L960 630 M890 420 L890 640" stroke="#32283c" stroke-width="12" stroke-linecap="round"/>
+ <path d="M850 630 H960" stroke="#32283c" stroke-width="10" stroke-linecap="round"/>
+ <rect x="842" y="260" width="96" height="164" rx="18" fill="#272333" filter="url(#shadow)"/>
+ <rect x="850" y="274" width="80" height="136" rx="11" fill="#d8c8ed"/>
+ <rect x="858" y="283" width="64" height="116" rx="8" fill="#f5e9e1"/>
+ <ellipse cx="889" cy="335" rx="19" ry="24" fill="#c98562"/>
+ <path d="M866 380 Q889 346 912 380" fill="#9b78c4"/>
+ <circle cx="890" cy="414" r="4" fill="#b7a9c5"/>
+ <!-- ring light -->
+ <circle cx="990" cy="282" r="66" fill="none" stroke="#fff" stroke-width="14" opacity=".9"/>
+ <circle cx="990" cy="282" r="50" fill="none" stroke="#d9c6f3" stroke-width="5"/>
+ <path d="M990 350 V425" stroke="#5c4a68" stroke-width="8" stroke-linecap="round"/>
+ <!-- tabletop -->
+ <path d="M160 510 H1040 L1000 590 H200Z" fill="#c69b78"/>
+ <path d="M200 590 H1000" stroke="#a77a5d" stroke-width="8"/>
+ <rect x="285" y="475" width="116" height="35" rx="8" fill="#fff" opacity=".8"/>
+ <rect x="300" y="462" width="86" height="18" rx="5" fill="#a68ac7"/>
+ <rect x="332" y="440" width="20" height="25" rx="4" fill="#d5b58a"/>
+ <rect x="760" y="488" width="78" height="23" rx="8" fill="#f7eee6"/>
+ <!-- bottom caption strip -->
+ <rect x="130" y="630" width="940" height="54" rx="14" fill="#241936"/>
+ <circle cx="164" cy="657" r="8" fill="#c7a2ff"/>
+ <text x="188" y="665" fill="#fff" font-family="Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="2">AUTHENTIC STORIES. CONTENT THAT CONNECTS.</text>
+</svg>
