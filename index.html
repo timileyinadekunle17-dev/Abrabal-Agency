@@ -52,7 +52,7 @@
 .portfolio-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
 .portfolio-card{display:block;min-width:0;border-radius:9px;overflow:hidden;background:#fff;border:1px solid #e9e6e1;box-shadow:0 3px 12px #21182b08;transition:transform .2s,box-shadow .2s}
 .portfolio-card:hover{transform:translateY(-4px);box-shadow:0 12px 25px #21182b16}
-.portfolio-art{height:148px;padding:13px;display:grid;place-items:center;background:linear-gradient(135deg,#f1e7d8,#e7e9f4)}
+.portfolio-art{height:168px;padding:0;display:block;overflow:hidden;background:#eee9f2}.portfolio-art img{display:block;width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .35s}.portfolio-card:hover .portfolio-art img{transform:scale(1.035)}
 .portfolio-browser{width:100%;height:100%;border-radius:6px;overflow:hidden;background:#fff;box-shadow:0 5px 16px #231b2b1c}
 .portfolio-browserbar{height:13px;background:#191d2b;display:flex;align-items:center;gap:3px;padding:0 6px}
 .portfolio-browserbar i{display:block;width:4px;height:4px;border-radius:50%;background:#d4c7b4}
@@ -68,8 +68,8 @@
 .portfolio-empty{grid-column:1/-1;text-align:center;padding:35px;color:#686378;font-size:13px}
 .portfolio-disclaimer{text-align:center;margin:18px 0 0;color:#777183;font-size:10px;line-height:1.6}
 @media(max-width:900px){.portfolio-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(max-width:680px){.portfolio-section{padding:65px 0}.portfolio-stats{gap:10px;grid-template-columns:repeat(3,minmax(0,1fr))}.portfolio-stat{padding:14px 8px}.portfolio-stat b{font-size:22px}.portfolio-controls{align-items:stretch}.portfolio-filters{flex-basis:100%}.portfolio-search{width:100%}.portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.portfolio-art{height:125px;padding:9px}.portfolio-card-body{padding:10px}.portfolio-card-body strong{font-size:11px}}
-@media(max-width:390px){.portfolio-grid{grid-template-columns:1fr}.portfolio-art{height:170px}}
+@media(max-width:680px){.portfolio-section{padding:65px 0}.portfolio-stats{gap:10px;grid-template-columns:repeat(3,minmax(0,1fr))}.portfolio-stat{padding:14px 8px}.portfolio-stat b{font-size:22px}.portfolio-controls{align-items:stretch}.portfolio-filters{flex-basis:100%}.portfolio-search{width:100%}.portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.portfolio-art{height:130px;padding:0}.portfolio-card-body{padding:10px}.portfolio-card-body strong{font-size:11px}}
+@media(max-width:390px){.portfolio-grid{grid-template-columns:1fr}.portfolio-art{height:170px;padding:0}}
 
 </style>
 </head>
@@ -114,8 +114,8 @@
 <section class="section" id="work" style="padding-top:0"><div class="container"><div class="section-heading"><span class="eyebrow">Our Work</span><h2>Made for Real Business <span class="gradient-text">Challenges.</span></h2><p>Every project starts with a different goal. Our work can span digital storefronts, business websites, creative campaigns and search visibility.</p></div><div class="work-panel"><div><h3>A portfolio should show the work — and the thinking behind it.</h3><p>We’re preparing this space for verified project examples, original screenshots and confirmed outcomes. We won’t use invented client stories, performance figures or testimonials. Ask us about the kind of solution your business needs.</p></div><div class="work-types"><div class="work-type"><span>▣</span>Business websites</div><div class="work-type"><span>▤</span>E-commerce stores</div><div class="work-type"><span>▶</span>Video &amp; campaign creative</div><div class="work-type"><span>⌕</span>SEO &amp; local visibility</div></div></div></div></section>
 <section class="portfolio-section" id="portfolio" aria-labelledby="portfolio-title">
 <div class="container">
-<div class="portfolio-heading"><span class="eyebrow">Store Inspiration</span><h2 id="portfolio-title">Our <span class="gradient-text">Portfolio</span></h2><p>Explore real online stores for design inspiration. Filter by platform or growth focus, or search for a store name. Each card opens the store in a new tab.</p></div>
-<div class="portfolio-stats" aria-label="Portfolio overview"><div class="portfolio-stat"><b>80+</b><span>Store examples</span></div><div class="portfolio-stat"><b>8</b><span>Categories</span></div><div class="portfolio-stat"><b>100%</b><span>Inspiration only</span></div></div>
+<div class="portfolio-heading"><span class="eyebrow">Store Inspiration</span><h2 id="portfolio-title">Our <span class="gradient-text">Portfolio</span></h2><p>Explore real online stores for design inspiration. Each card shows a live screenshot of the store’s current homepage hero area. Filter by platform or growth focus, or search for a store name.</p></div>
+<div class="portfolio-stats" aria-label="Portfolio overview"><div class="portfolio-stat"><b>96</b><span>Store examples</span></div><div class="portfolio-stat"><b>8</b><span>Categories</span></div><div class="portfolio-stat"><b>100%</b><span>Inspiration only</span></div></div>
 <div class="portfolio-controls"><div class="portfolio-filters" role="group" aria-label="Filter store examples">
 <button class="portfolio-filter active" type="button" data-filter="all" aria-pressed="true">All</button>
 <button class="portfolio-filter" type="button" data-filter="shopify" aria-pressed="false">Shopify</button>
@@ -128,7 +128,7 @@
 <button class="portfolio-filter" type="button" data-filter="dropshipping" aria-pressed="false">Dropshipping</button>
 </div><input class="portfolio-search" type="search" id="portfolio-search" placeholder="⌕  Search stores..." aria-label="Search store examples"></div>
 <div class="portfolio-grid" id="portfolio-grid" aria-live="polite"></div>
-<p class="portfolio-disclaimer">These are independent, real-world store examples for inspiration—not Abrabal Agency client projects. Platform and marketing-category labels are based on published showcase or example sources; stores and features can change over time.</p>
+<p class="portfolio-disclaimer">These are independent, real-world store examples for inspiration—not Abrabal Agency client projects. Preview images are live homepage captures and may change as each store updates its design. Platform and marketing-category labels are illustrative; stores and features can change over time.</p>
 </div></section>
 <section class="section section-light" id="process"><div class="container"><div class="section-heading center"><span class="eyebrow">How We Work</span><h2>A Clear Path From <span class="gradient-text">Idea to Launch.</span></h2><p>A collaborative four-step process keeps the project focused, transparent and moving in the right direction.</p></div><div class="process-grid">
 <article class="process-card"><h3>Discovery &amp; Consultation</h3><p>We learn about your business, audience, goals and what you need the project to achieve.</p></article>
@@ -175,7 +175,9 @@ shopify:[
 ["Alo Yoga","https://www.aloyoga.com","Activewear"],
 ["Fashion Nova","https://www.fashionnova.com","Fashion"],
 ["Hiut Denim Co.","https://hiutdenim.co.uk","Denim & apparel"],
-["The Honey Pot","https://thehoneypot.com","Personal care"]],
+["The Honey Pot","https://thehoneypot.com","Personal care"],
+["Pura Vida","https://www.puravidabracelets.com","Jewellery & accessories"],
+["Death Wish Coffee","https://www.deathwishcoffee.com","Coffee & beverage"]],
 woocommerce:[
 ["Wild Souls","https://wildsouls.gr","Food & beverage"],
 ["Good Drills","https://good-drills.com","Sports & outdoors"],
@@ -186,7 +188,9 @@ woocommerce:[
 ["Scrub Daddy","https://scrubdaddy.com","Home & cleaning"],
 ["Van Leeuwen","https://vanleeuwenicecream.com","Food & beverage"],
 ["Landyachtz","https://landyachtz.com","Skateboards & outdoor"],
-["La Marzocco","https://www.lamarzocco.com","Coffee equipment"]],
+["La Marzocco","https://www.lamarzocco.com","Coffee equipment"],
+["Nalgene","https://nalgene.com","Drinkware & outdoor"],
+["Roots","https://www.roots.com","Apparel & lifestyle"]],
 wix:[
 ["Izzy Wheels","https://www.wix.com/explore/websites/categories/ecommerce","Accessories & design"],
 ["Eor Glass Studio","https://www.wix.com/explore/websites/categories/ecommerce","Art & glass"],
@@ -197,7 +201,9 @@ wix:[
 ["Nue Modern","https://www.wix.com/explore/websites/categories/ecommerce","Modern goods"],
 ["Tach Clothing","https://www.wix.com/explore/websites/categories/ecommerce","Fashion"],
 ["Scandinazn","https://www.wix.com/explore/websites/categories/ecommerce","Design & lifestyle"],
-["The Mighty Spice Co.","https://www.wix.com/explore/websites/categories/ecommerce","Food & spices"]],
+["The Mighty Spice Co.","https://www.wix.com/explore/websites/categories/ecommerce","Food & spices"],
+["Izzy Wheels","https://izzywheels.com","Accessories & design"],
+["The Spice Suite","https://www.spicesuite.com","Food & spices"]],
 squarespace:[
 ["Frankly Good Coffee","https://franklygoodcoffee.com","Coffee"],
 ["Memor","https://shopmemor.com","Home & lifestyle"],
@@ -208,7 +214,9 @@ squarespace:[
 ["Not Work Related","https://notworkrelated.co","Apparel"],
 ["Sunnie","https://sunnie.com","Lifestyle"],
 ["Dreamsake","https://dreamsake.com","Lifestyle"],
-["Nerine Floral","https://nerinefloral.com","Flowers & gifts"]],
+["Nerine Floral","https://nerinefloral.com","Flowers & gifts"],
+["KINFOLK","https://www.kinfolk.com","Lifestyle & publishing"],
+["The Future Kept","https://thefuturekept.com","Home & lifestyle"]],
 email:[
 ["Our Place","https://fromourplace.com","Welcome offer & brand story"],
 ["Immi","https://immieats.com","Welcome email inspiration"],
@@ -219,7 +227,9 @@ email:[
 ["Rothy's","https://rothys.com","Product launch inspiration"],
 ["Allbirds","https://www.allbirds.com","Brand storytelling"],
 ["Kylie Cosmetics","https://kyliecosmetics.com","Product launches"],
-["Fenty Beauty","https://fentybeauty.com","Campaign inspiration"]],
+["Fenty Beauty","https://fentybeauty.com","Campaign inspiration"],
+["Casper","https://casper.com","Welcome & product education"],
+["LUSH","https://www.lush.com","Campaign & customer engagement"]],
 seo:[
 ["REI","https://www.rei.com","Category and product discovery"],
 ["Etsy","https://www.etsy.com","Marketplace search discovery"],
@@ -230,7 +240,9 @@ seo:[
 ["Home Depot","https://www.homedepot.com","Local and product discovery"],
 ["Chewy","https://www.chewy.com","Category-led shopping"],
 ["Patagonia","https://www.patagonia.com","Product content"],
-["Thule","https://www.thule.com","Product information architecture"]],
+["Thule","https://www.thule.com","Product information architecture"],
+["Amazon","https://www.amazon.com","Product discovery & navigation"],
+["Booking.com","https://www.booking.com","Search-led discovery"]],
 social:[
 ["Gymshark","https://www.gymshark.com","Creator-led brand"],
 ["Fenty Beauty","https://fentybeauty.com","Beauty & social content"],
@@ -241,7 +253,9 @@ social:[
 ["Alo Yoga","https://www.aloyoga.com","Lifestyle & creator content"],
 ["Fashion Nova","https://www.fashionnova.com","Fashion & social discovery"],
 ["ColourPop","https://colourpop.com","Beauty & creator content"],
-["Crumbl Cookies","https://crumblcookies.com","Food & social discovery"]],
+["Crumbl Cookies","https://crumblcookies.com","Food & social discovery"],
+["Crocs","https://www.crocs.com","Community & social campaigns"],
+["Dunkin’","https://www.dunkindonuts.com","Food & social campaigns"]],
 dropshipping:[
 ["Gymshark","https://www.gymshark.com","Store design reference"],
 ["Allbirds","https://www.allbirds.com","Product presentation"],
@@ -252,7 +266,9 @@ dropshipping:[
 ["Alo Yoga","https://www.aloyoga.com","Apparel storefront"],
 ["ColourPop","https://colourpop.com","Beauty product discovery"],
 ["Hismile","https://hismileteeth.com","Personal care storefront"],
-["Frank Body","https://www.frankbody.com","Skincare storefront"]]
+["Frank Body","https://www.frankbody.com","Skincare storefront"],
+["Inspire Uplift","https://www.inspireuplift.com","Lifestyle product storefront"],
+["Warmly","https://warmly.com","Home décor storefront"]]
 };
 const portfolioLabels={shopify:"Shopify",woocommerce:"WooCommerce",wix:"Wix",squarespace:"Squarespace",email:"Email marketing inspiration",seo:"SEO & discovery inspiration",social:"Social commerce inspiration",dropshipping:"Storefront inspiration"};
 const portfolioGrid=document.querySelector("#portfolio-grid");
@@ -263,7 +279,7 @@ function renderPortfolio(){
  const q=portfolioSearch.value.trim().toLowerCase();
  const entries=Object.entries(portfolioData).flatMap(([category,items])=>items.map(([name,url,description],index)=>({category,name,url,description,index})));
  const shown=entries.filter(item=>(portfolioFilter==="all"||item.category===portfolioFilter)&&(!q||[item.name,item.description,portfolioLabels[item.category]].join(" ").toLowerCase().includes(q)));
- portfolioGrid.innerHTML=shown.length?shown.map((item,i)=>{const colors=portfolioPalette[(i+item.index)%portfolioPalette.length];return '<a class="portfolio-card" href="'+item.url+'" target="_blank" rel="noopener noreferrer" aria-label="Open '+item.name+' store in a new tab"><div class="portfolio-art"><div class="portfolio-browser"><div class="portfolio-browserbar"><i></i><i></i><i></i></div><div class="portfolio-cover" style="--art-a:'+colors[0]+';--art-b:'+colors[1]+'"><strong>'+item.name+'</strong><span></span></div></div></div><div class="portfolio-card-body"><strong>'+item.name+'</strong><span>'+item.description+'</span><small>'+portfolioLabels[item.category]+' ↗</small></div></a>'}).join(""):'<div class="portfolio-empty">No stores match that search. Try another name or category.</div>';
+ portfolioGrid.innerHTML=shown.length?shown.map((item)=>{const preview='https://image.thum.io/get/width/1200/crop/650/noanimate/'+item.url;return '<a class="portfolio-card" href="'+item.url+'" target="_blank" rel="noopener noreferrer" aria-label="Open '+item.name+' store in a new tab"><div class="portfolio-art"><img src="'+preview+'" alt="'+item.name+' storefront hero preview" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display=\'none\';this.parentElement.style.background=\'linear-gradient(135deg,#e8ddf8,#dce7f8)\'"></div><div class="portfolio-card-body"><strong>'+item.name+'</strong><span>'+item.description+'</span><small>'+portfolioLabels[item.category]+' ↗</small></div></a>'}).join(""):'<div class="portfolio-empty">No stores match that search. Try another name or category.</div>';
 }
 document.querySelectorAll(".portfolio-filter").forEach(button=>button.addEventListener("click",()=>{portfolioFilter=button.dataset.filter;document.querySelectorAll(".portfolio-filter").forEach(b=>{const active=b===button;b.classList.toggle("active",active);b.setAttribute("aria-pressed",String(active))});renderPortfolio()}));
 portfolioSearch.addEventListener("input",renderPortfolio);
