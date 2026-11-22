@@ -121,6 +121,52 @@
 .portfolio-page-cta{padding:75px 0;background:#f7f5fc}.portfolio-page-cta .cta{background:linear-gradient(120deg,#f0e7ff,#e9edff);border-color:#e2d8f1}
 @media(max-width:850px){.portfolio-hero{padding:68px 0}.portfolio-hero-inner{grid-template-columns:1fr;gap:30px}.portfolio-hero:before{inset:0;background-position:center;opacity:.3}.portfolio-hero-visual{min-height:300px}.portfolio-hero h1{max-width:680px}}
 @media(max-width:650px){.portfolio-hero{padding:65px 0 58px}.portfolio-hero-inner{min-height:0}.portfolio-hero h1{font-size:clamp(42px,11vw,58px);letter-spacing:-2px}.portfolio-hero-copy>p{font-size:13px}.portfolio-hero-visual{min-height:250px;border-radius:18px}.portfolio-hero-note{left:19px;right:19px;bottom:18px}.portfolio-hero-note strong{font-size:18px}.portfolio-page-cta{padding:55px 0}}
+
+/* Portfolio feature sections */
+.portfolio-section-heading{display:flex;justify-content:space-between;align-items:end;gap:32px;margin:0 0 30px}
+.portfolio-section-heading>div{max-width:580px}
+.portfolio-section-heading .eyebrow{margin-bottom:12px}
+.portfolio-section-heading h2{font-size:clamp(32px,4vw,46px);line-height:1.08;letter-spacing:-1.7px;margin:0;color:#20182f}
+.portfolio-section-heading h2 span{color:#7542d8}
+.portfolio-section-heading>p{max-width:470px;margin:0;color:#706a7e;font-size:13px;line-height:1.8}
+.featured-work-section{padding:82px 0 76px;background:#fff}
+.featured-work-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.featured-work-card{min-width:0;border:1px solid #ece8f2;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 10px 32px #2116320a;transition:transform .25s ease,box-shadow .25s ease}
+.featured-work-card:hover{transform:translateY(-5px);box-shadow:0 18px 38px #21163216}
+.featured-work-image{position:relative;display:block;height:260px;overflow:hidden;background:#eeeaf4}
+.featured-work-image:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,#100d1db0)}
+.featured-work-image img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .5s ease}
+.featured-work-card:hover .featured-work-image img{transform:scale(1.045)}
+.featured-work-tag{position:absolute;z-index:1;top:15px;left:15px;padding:8px 11px;border-radius:30px;background:#fff;color:#332344;font-size:9px;font-weight:800;letter-spacing:.4px}
+.featured-work-open{position:absolute;z-index:1;right:15px;bottom:14px;width:34px;height:34px;display:grid;place-items:center;border:1px solid #ffffff85;border-radius:50%;color:#fff;font-size:16px}
+.featured-work-copy{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px}
+.featured-work-copy>div>span{color:#7542d8;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:1px}
+.featured-work-copy h3{margin:6px 0 0;color:#211a30;font-size:15px;line-height:1.35}
+.featured-work-copy>a{flex-shrink:0;color:#7542d8;font-size:10px;font-weight:800}
+.website-gallery-section{padding:78px 0;background:#f7f5fb}
+.website-gallery-grid{display:grid;grid-template-columns:1.15fr .85fr .85fr;grid-template-rows:220px 220px;gap:14px}
+.website-gallery-item{position:relative;display:block;min-width:0;overflow:hidden;border-radius:16px;background:#dcd5e8}
+.website-gallery-item:first-child{grid-row:span 2}
+.website-gallery-item:last-child{grid-column:2 / 4}
+.website-gallery-item img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .5s ease}
+.website-gallery-item:hover img{transform:scale(1.05)}
+.gallery-item-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:end;align-items:flex-start;padding:22px;background:linear-gradient(180deg,transparent 25%,#100d1dcc 100%);color:#fff}
+.gallery-item-overlay small{font-size:9px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;color:#dfc9ff}
+.gallery-item-overlay strong{margin-top:7px;font-size:19px;line-height:1.2}
+.gallery-item-overlay em{margin-top:8px;font-style:normal;font-size:10px;font-weight:800;color:#fff}
+.gallery-disclaimer{margin:17px 0 0;color:#7a7486;font-size:10px;line-height:1.6}
+.creative-capabilities-section{padding:82px 0;background:#100d1d;color:#fff}
+.capabilities-heading h2{color:#fff}
+.capabilities-heading>p{color:#c2bbd0}
+.capabilities-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.capability-card{padding:24px;border:1px solid #ffffff1b;border-radius:15px;background:linear-gradient(145deg,#211a31,#171322);transition:border-color .2s ease,transform .2s ease}
+.capability-card:hover{border-color:#8c63d8;transform:translateY(-3px)}
+.capability-icon{width:39px;height:39px;display:grid;place-items:center;border-radius:11px;background:#7542d826;color:#c6a6ff;font-size:21px}
+.capability-card h3{margin:17px 0 8px;color:#fff;font-size:15px}
+.capability-card p{min-height:60px;margin:0;color:#c2bbd0;font-size:11px;line-height:1.75}
+.capability-card>a{display:inline-block;margin-top:16px;color:#c6a6ff;font-size:10px;font-weight:800}
+@media(max-width:850px){.portfolio-section-heading{align-items:flex-start;flex-direction:column;gap:12px}.featured-work-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.website-gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:220px 180px 180px}.website-gallery-item:first-child{grid-row:span 2}.website-gallery-item:last-child{grid-column:auto}.capabilities-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:580px){.featured-work-section,.website-gallery-section,.creative-capabilities-section{padding:58px 0}.featured-work-grid{grid-template-columns:1fr;gap:14px}.featured-work-image{height:230px}.featured-work-copy{padding:15px}.website-gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:210px 155px 155px;gap:9px}.gallery-item-overlay{padding:13px}.gallery-item-overlay strong{font-size:14px}.capabilities-grid{grid-template-columns:1fr;gap:10px}.capability-card{padding:20px}.capability-card p{min-height:0}}
 </style></head><body>
 <header class="site-header"><div class="header-inner">
 <a class="brand" href="index.html"><img src="assets/logo/Official%20agency%20logo.png" alt="Abrabal Agency logo">Abrabal<br>Agency</a>
@@ -132,6 +178,43 @@
 <div class="portfolio-hero-copy"><span class="eyebrow">ABRABAL AGENCY · SELECTED WORK & INSPIRATION</span><h1>Work That Moves <span>Brands Forward.</span></h1><p>Explore digital storefronts, creative ideas and brand content that show what thoughtful design and clear storytelling can make possible for a business.</p><div class="portfolio-hero-actions"><a class="btn" href="#portfolio">Explore the Portfolio <span aria-hidden="true">↘</span></a><a class="btn-outline" href="#ugc-videos">Watch Brand UGC</a></div></div>
 <div class="portfolio-hero-visual" role="img" aria-label="Modern creative studio workspace"><div class="portfolio-hero-note"><div><small>Ideas into experiences</small><strong>Digital work with purpose.</strong></div><em>Design · Content · Growth</em></div></div>
 </div></section>
+
+<!-- Featured projects: clearly presented as creative directions, not client case studies -->
+<section class="featured-work-section" id="featured-projects" aria-labelledby="featured-work-title">
+ <div class="container">
+  <div class="portfolio-section-heading"><div><span class="eyebrow">A Glimpse of What's Possible</span><h2 id="featured-work-title">Featured <span>Projects</span></h2></div><p>Explore a few creative directions that show how we approach storefront design across different industries. These are inspiration concepts, not claimed client case studies.</p></div>
+  <div class="featured-work-grid">
+   <article class="featured-work-card featured-work-card-fashion"><a class="featured-work-image" href="#portfolio" aria-label="Explore fashion store examples"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1100&q=85" alt="Curated fashion collection and apparel styling" loading="lazy"><span class="featured-work-tag">Design direction 01</span><span class="featured-work-open" aria-hidden="true">↗</span></a><div class="featured-work-copy"><div><span>Fashion & Apparel</span><h3>Fashion storefront experience</h3></div><a href="#portfolio" aria-label="Explore fashion store examples">Explore examples ↗</a></div></article>
+   <article class="featured-work-card featured-work-card-beauty"><a class="featured-work-image" href="#portfolio" aria-label="Explore beauty store examples"><img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=1100&q=85" alt="Minimal beauty and skincare product collection" loading="lazy"><span class="featured-work-tag">Design direction 02</span><span class="featured-work-open" aria-hidden="true">↗</span></a><div class="featured-work-copy"><div><span>Beauty & Wellness</span><h3>Beauty brand storefront</h3></div><a href="#portfolio" aria-label="Explore beauty store examples">Explore examples ↗</a></div></article>
+   <article class="featured-work-card featured-work-card-home"><a class="featured-work-image" href="#portfolio" aria-label="Explore home and lifestyle store examples"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1100&q=85" alt="Thoughtfully styled modern home interior" loading="lazy"><span class="featured-work-tag">Design direction 03</span><span class="featured-work-open" aria-hidden="true">↗</span></a><div class="featured-work-copy"><div><span>Home & Lifestyle</span><h3>Lifestyle shopping experience</h3></div><a href="#portfolio" aria-label="Explore home and lifestyle store examples">Explore examples ↗</a></div></article>
+  </div>
+ </div>
+</section>
+<section class="website-gallery-section" id="website-gallery" aria-labelledby="website-gallery-title">
+ <div class="container">
+  <div class="portfolio-section-heading"><div><span class="eyebrow">Ideas for Every Industry</span><h2 id="website-gallery-title">Website Design <span>Gallery</span></h2></div><p>Browse visual directions for different kinds of online stores—from bold product-led layouts to calm, editorial shopping experiences.</p></div>
+  <div class="website-gallery-grid">
+   <a class="website-gallery-item gallery-fashion" href="#portfolio"><img src="https://images.unsplash.com/photo-1543076447-215ad9ba6923?auto=format&fit=crop&w=1000&q=85" alt="Contemporary fashion collection" loading="lazy"><span class="gallery-item-overlay"><small>01 / Fashion</small><strong>Style-led storefronts</strong><em>Explore examples ↗</em></span></a>
+   <a class="website-gallery-item gallery-beauty" href="#portfolio"><img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1000&q=85" alt="Skincare and beauty products" loading="lazy"><span class="gallery-item-overlay"><small>02 / Beauty</small><strong>Clean product storytelling</strong><em>Explore examples ↗</em></span></a>
+   <a class="website-gallery-item gallery-tech" href="#portfolio"><img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=1000&q=85" alt="Consumer electronics and technology products" loading="lazy"><span class="gallery-item-overlay"><small>03 / Technology</small><strong>Product-first experiences</strong><em>Explore examples ↗</em></span></a>
+   <a class="website-gallery-item gallery-home" href="#portfolio"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1000&q=85" alt="Modern home and interior styling" loading="lazy"><span class="gallery-item-overlay"><small>04 / Home & Living</small><strong>Warm, considered layouts</strong><em>Explore examples ↗</em></span></a>
+  </div>
+  <p class="gallery-disclaimer">These visuals illustrate creative directions. Visit the store inspiration directory below for independently operated live-store examples.</p>
+ </div>
+</section>
+<section class="creative-capabilities-section" id="creative-capabilities" aria-labelledby="creative-capabilities-title">
+ <div class="container">
+  <div class="portfolio-section-heading capabilities-heading"><div><span class="eyebrow">From First Idea to Launch</span><h2 id="creative-capabilities-title">Our Creative <span>Capabilities</span></h2></div><p>One creative partner for the digital touchpoints that help your brand look consistent, communicate clearly and grow online.</p></div>
+  <div class="capabilities-grid">
+   <article class="capability-card"><span class="capability-icon" aria-hidden="true">▦</span><h3>eCommerce Website Design</h3><p>Conversion-conscious storefronts with clear navigation, thoughtful product presentation and responsive layouts.</p><a href="services.html">Explore service ↗</a></article>
+   <article class="capability-card"><span class="capability-icon" aria-hidden="true">◇</span><h3>Brand Identity & Graphics</h3><p>Visual systems and creative assets that give your business a recognisable, consistent look.</p><a href="services.html">Explore service ↗</a></article>
+   <article class="capability-card"><span class="capability-icon" aria-hidden="true">▶</span><h3>UGC & Video Content</h3><p>Creator-led product videos and short-form content designed to feel relatable and useful.</p><a href="#ugc-videos">See UGC examples ↗</a></article>
+   <article class="capability-card"><span class="capability-icon" aria-hidden="true">⌕</span><h3>SEO & Visibility</h3><p>Search-focused improvements that help customers discover your products and services.</p><a href="services.html">Explore service ↗</a></article>
+   <article class="capability-card"><span class="capability-icon" aria-hidden="true">✉</span><h3>Email Marketing</h3><p>Campaigns and customer journeys that support stronger relationships beyond the first visit.</p><a href="services.html">Explore service ↗</a></article>
+   <article class="capability-card"><span class="capability-icon" aria-hidden="true">↗</span><h3>Digital Marketing</h3><p>Connected creative and marketing support to help your brand reach the right audience.</p><a href="services.html">Explore service ↗</a></article>
+  </div>
+ </div>
+</section>
 <section class="portfolio-section" id="portfolio" aria-labelledby="portfolio-title">
 <div class="container">
 <div class="portfolio-heading"><span class="eyebrow">Store Inspiration</span><h2 id="portfolio-title">Our <span class="gradient-text">Portfolio</span></h2><p>Explore 92 real eCommerce businesses across the niches we design for. Each card features a live store to help you discover the style, structure and quality we can bring to your project. Select any card to visit the store in a new tab.</p></div>
