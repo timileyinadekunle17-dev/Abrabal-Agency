@@ -49,6 +49,7 @@
 .portfolio-filter:hover{transform:translateY(-1px)}
 .portfolio-filter.active{background:#ffb812;color:#171426;box-shadow:0 5px 14px #e9a50040}
 .portfolio-search{width:190px;max-width:100%;border:1px solid #d1ced8;border-radius:22px;background:#fff;padding:10px 13px;font:11px "DM Sans",Arial,sans-serif;color:#171426}
+.portfolio-count{margin-top:14px;text-align:center;color:#686378;font-size:12px;font-weight:700;letter-spacing:.02em}
 .portfolio-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
 .portfolio-card{display:block;min-width:0;border-radius:9px;overflow:hidden;background:#fff;border:1px solid #e9e6e1;box-shadow:0 3px 12px #21182b08;transition:transform .2s,box-shadow .2s}
 .portfolio-card:hover{transform:translateY(-4px);box-shadow:0 12px 25px #21182b16}
@@ -408,8 +409,7 @@ function renderPortfolio(){
  const entries=Object.entries(portfolioData).flatMap(([category,items])=>items.map(([name,url,description],index)=>({category,name,url,description,index,image:portfolioImages[name]})));
  const categoryEntries=entries.filter(item=>portfolioFilter==="all"||item.category===portfolioFilter);
  const shown=categoryEntries.filter(item=>!q||[item.name,item.description,portfolioLabels[item.category]].join(" ").toLowerCase().includes(q));
- const countLabel=portfolioFilter==="all"?"niches":(portfolioLabels[portfolioFilter]||"niches");
- document.querySelector("#portfolio-count").textContent="Showing "+shown.length+" of "+categoryEntries.length+" "+countLabel.toLowerCase();
+ document.querySelector("#portfolio-count").textContent="Showing "+shown.length+" of "+categoryEntries.length+" niches";
  portfolioGrid.innerHTML=shown.length?shown.map((item)=>{
   const image=item.image?'<div class="portfolio-art"><img src="'+item.image+'" alt="'+item.name+' official homepage imagery" loading="lazy" decoding="async"></div>':'';
   return '<a class="portfolio-card" href="'+item.url+'" target="_blank" rel="noopener noreferrer" aria-label="Open '+item.name+' store in a new tab">'+image+'<div class="portfolio-card-body"><strong>'+item.name+'</strong><span>'+item.description+'</span><small>'+portfolioLabels[item.category]+' ↗</small></div></a>';
