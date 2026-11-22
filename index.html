@@ -116,6 +116,27 @@
 @media(max-width:640px){#platforms{padding:64px 0}#platforms h2{font-size:34px;letter-spacing:-1.2px}#platforms p{font-size:13px;margin-bottom:30px}#platforms .animate-marquee-slow,#platforms .animate-marquee-reverse{gap:12px}#platforms a{flex-basis:124px;min-width:124px;padding:15px 11px}#platforms a>div:first-child{width:62px;height:62px}#platforms a>div:first-child>div{width:54px;height:54px}#platforms a img{width:46px;height:46px}}
 @media(prefers-reduced-motion:reduce){#platforms .animate-marquee-slow,#platforms .animate-marquee-reverse{animation:none;transform:none;flex-wrap:wrap;justify-content:center;width:100%}#platforms>.flex{overflow:visible}}
 
+
+/* Process section refresh */
+.process-showcase{overflow:hidden}
+.process-showcase .process-intro{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;gap:42px;margin-bottom:58px}
+.process-showcase .process-intro-copy{align-self:center;max-width:560px}
+.process-showcase .process-intro-copy h2{font-size:clamp(34px,4.2vw,54px);line-height:1.08;letter-spacing:-1.8px;margin:16px 0 20px}
+.process-showcase .process-intro-copy>p{font-size:15px;line-height:1.85;color:#686477;max-width:510px;margin:0 0 26px}
+.process-showcase .process-hero-image{position:relative;min-height:390px;border-radius:24px;overflow:hidden;background:linear-gradient(180deg,transparent 35%,rgba(12,8,27,.82)),url("https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1400&q=88") center 45%/cover}
+.process-showcase .process-image-caption{position:absolute;left:28px;right:28px;bottom:26px;color:#fff;display:flex;flex-direction:column;gap:10px}
+.process-showcase .process-image-caption span{font-size:11px;letter-spacing:2px;font-weight:800;color:#d7c5ff}
+.process-showcase .process-image-caption strong{font-size:clamp(22px,2.5vw,30px);line-height:1.15;letter-spacing:-.5px}
+.process-showcase .process-steps-heading{margin-bottom:22px}
+.process-showcase .process-steps-heading h3{font-size:25px;letter-spacing:-.6px;margin:8px 0 0}
+.process-showcase .process-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.process-showcase .process-card{padding:25px 22px;border-radius:17px;min-height:190px;box-shadow:0 8px 30px rgba(34,20,65,.045)}
+.process-showcase .process-card:before{margin-bottom:25px}
+.process-showcase .process-card h3{font-size:17px;margin-bottom:11px}
+.process-showcase .process-card p{font-size:13px;line-height:1.75}
+@media(max-width:900px){.process-showcase .process-intro{gap:26px}.process-showcase .process-hero-image{min-height:340px}.process-showcase .process-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.process-showcase .process-intro{grid-template-columns:1fr;gap:24px;margin-bottom:42px}.process-showcase .process-intro-copy h2{font-size:36px}.process-showcase .process-hero-image{min-height:300px}.process-showcase .process-grid{grid-template-columns:1fr 1fr;gap:10px}.process-showcase .process-card{padding:19px 15px;min-height:185px}.process-showcase .process-card:before{margin-bottom:18px}.process-showcase .process-card h3{font-size:15px}.process-showcase .process-card p{font-size:12px}.process-showcase .process-steps-heading h3{font-size:22px}}
+@media(max-width:390px){.process-showcase .process-grid{grid-template-columns:1fr}.process-showcase .process-card{min-height:0}}
 </style>
 </head>
 <body>
@@ -183,12 +204,28 @@
 <div class="portfolio-count" id="portfolio-count" aria-live="polite">Showing 92 of 92 niches</div>
 
 </div></section>
-<section class="section section-light" id="process"><div class="container"><div class="section-heading center"><span class="eyebrow">How We Work</span><h2>A Clear Path From <span class="gradient-text">Idea to Launch.</span></h2><p>A collaborative four-step process keeps the project focused, transparent and moving in the right direction.</p></div><div class="process-grid">
-<article class="process-card"><h3>Discovery &amp; Consultation</h3><p>We learn about your business, audience, goals and what you need the project to achieve.</p></article>
-<article class="process-card"><h3>Strategy &amp; Planning</h3><p>We define the scope, recommended approach, priorities and project expectations before work begins.</p></article>
-<article class="process-card"><h3>Design &amp; Development</h3><p>We create the agreed website, store or creative assets, sharing progress and gathering your feedback.</p></article>
-<article class="process-card"><h3>Launch &amp; Support</h3><p>We prepare the agreed deliverables for handover or launch and discuss any ongoing support required.</p></article>
-</div></div></section>
+<section class="section section-light process-showcase" id="process">
+<div class="container">
+  <div class="process-intro">
+    <div class="process-intro-copy">
+      <span class="eyebrow">How We Work</span>
+      <h2>From First Conversation to <span class="gradient-text">A Powerful Digital Launch.</span></h2>
+      <p>Great results start with a clear plan. We bring strategy, creativity and thoughtful execution together—keeping you involved, informed and confident at every stage.</p>
+      <a class="btn" href="#contact">Let's Build Something <span class="arrow">↗</span></a>
+    </div>
+    <div class="process-hero-image" role="img" aria-label="Creative professionals collaborating around a laptop on a digital project">
+      <div class="process-image-caption"><span>01 — 04</span><strong>One clear process.<br>Built around your goals.</strong></div>
+    </div>
+  </div>
+  <div class="process-steps-heading"><span class="eyebrow">The journey</span><h3>Four steps. One shared goal.</h3></div>
+  <div class="process-grid">
+    <article class="process-card"><h3>Discover</h3><p>We listen first—understanding your business, audience, challenges and what success should look like.</p></article>
+    <article class="process-card"><h3>Plan</h3><p>We shape the right strategy, define priorities and agree on a clear direction before the work begins.</p></article>
+    <article class="process-card"><h3>Create</h3><p>We bring the plan to life through considered design, development and creative execution—with your feedback along the way.</p></article>
+    <article class="process-card"><h3>Launch &amp; Grow</h3><p>We prepare your project for launch, hand over the finished work and help you understand the next steps.</p></article>
+  </div>
+</div>
+</section>
 <section class="section" id="team"><div class="container"><div class="section-heading"><span class="eyebrow">The People Behind the Work</span><h2>Meet the Team <span class="gradient-text">Behind Abrabal Agency.</span></h2><p>A team bringing together e-commerce, website design, social media and search optimization expertise to help brands grow.</p></div><div class="team-grid">
 <article class="team-card"><img class="team-avatar" src="assets/team/abrabal.jpg.jpg" alt="Abrabal Agency CEO" loading="lazy"><h3>Abrabal Agency</h3><p class="team-role">CEO / Dropshipping Specialist</p><div class="team-social"><a href="mailto:abrabalteamagency@gmail.com" aria-label="Email Abrabal">Email</a><a href="https://www.facebook.com/profile.php?id=100088809683190" target="_blank" rel="noopener noreferrer">Facebook</a><a href="tel:+2348103813072">Call</a><a href="https://wa.me/2348081210938" target="_blank" rel="noopener noreferrer">WhatsApp</a></div><p class="team-bio">Leads Abrabal Agency with a focus on e-commerce, dropshipping and digital marketing, helping businesses build and grow their online presence.</p></article>
 <article class="team-card"><img class="team-avatar" src="assets/team/sammywealth.png" alt="Sammywealth" loading="lazy"><h3>Sammywealth</h3><p class="team-role">Website Designer</p><div class="team-social"><a href="https://www.instagram.com/shopifyexpert011" target="_blank" rel="noopener noreferrer">Instagram</a></div><p class="team-bio">Creates visually engaging, user-friendly websites, bringing website design experience and a focus on polished digital experiences.</p></article>
