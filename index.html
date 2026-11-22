@@ -76,7 +76,7 @@
 /* Client trust marquee */
 .client-trust{padding:66px 0 58px;background:#ffffff;border-top:1px solid #e8e8ee;border-bottom:1px solid #e8e8ee;overflow:hidden}
 .client-trust-heading{text-align:center;width:min(680px,90%);margin:0 auto 34px}
-.client-trust-heading h2{font-size:clamp(29px,3.8vw,40px);line-height:1.1;letter-spacing:-1.5px;margin:0 0 12px}
+.client-trust-heading h2{font-size:clamp(29px,3.8vw,40px);line-height:1.1;letter-spacing:-1.5px;margin:0 0 12px;color:#111111}
 .client-trust-heading h2 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .client-trust-heading p{color:#666477;font-size:13px;line-height:1.7;margin:0}
 .trust-marquee{overflow:hidden;width:100%;mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
@@ -85,8 +85,8 @@
 .trust-marquee-group{display:flex;gap:18px;flex-shrink:0}
 .trust-marquee-card{width:176px;min-height:174px;flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px 14px;border:1px solid #e7e3ef;border-radius:16px;background:#ffffff;box-shadow:0 5px 20px #21143a0d;transition:border-color .2s,transform .2s,box-shadow .2s}
 .trust-marquee-card:hover{border-color:#9b4dff99;transform:translateY(-4px);box-shadow:0 12px 30px #7136e622}
-.trust-marquee-icon{width:54px;height:54px;display:grid;place-items:center;margin-bottom:13px;border-radius:50%;border:1px solid #a879ff55;background:#9b4dff18;color:#e0c8ff;font-size:25px}
-.trust-marquee-icon svg{width:29px;height:29px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.trust-marquee-icon{width:54px;height:54px;display:grid;place-items:center;margin-bottom:13px;border-radius:50%;border:2px solid #8b3dff;background:#ffffff;color:#111111;font-size:25px}
+.trust-marquee-icon svg{width:29px;height:29px;stroke:#111111;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
 .trust-marquee-card h3{font-size:13px;line-height:1.3;margin:0 0 6px;font-weight:800}
 .trust-marquee-card p{font-size:10px;line-height:1.5;color:#666477;margin:0}
 @keyframes trust-marquee{from{transform:translateX(-50%)}to{transform:translateX(0)}}
