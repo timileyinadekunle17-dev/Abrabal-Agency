@@ -273,6 +273,31 @@
   #contact .contact-option{padding:15px}
   #contact .contact-option-copy strong{font-size:13px}
 }
+
+/* Homepage team showcase — branded adaptation of the supplied reference layout. */
+.home-team-section{padding:94px 0 100px;background:#100d1d;color:#fff;overflow:hidden}
+.home-team-heading{max-width:760px;margin:0 auto 48px;text-align:center}
+.home-team-heading .eyebrow{color:#c49bff;justify-content:center}
+.home-team-heading h2{font-size:clamp(34px,4.5vw,54px);line-height:1.06;letter-spacing:-2px;margin:0 0 16px}
+.home-team-heading>p{max-width:620px;margin:0 auto;color:#c2bdd0;font-size:14px;line-height:1.85}
+.home-team-grid{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px;max-width:1040px;margin:0 auto}
+.home-team-grid:before{content:"";position:absolute;top:76px;left:12%;right:12%;height:1px;background:linear-gradient(90deg,transparent,#8d63ca88 15%,#8d63ca88 85%,transparent)}
+.home-team-member{position:relative;z-index:1;min-width:0;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 10px}
+.home-team-photo-wrap{position:relative;width:156px;height:156px;margin:0 auto 20px}
+.home-team-photo-wrap>img{display:block;width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 30%;border:3px solid #9b68e9;padding:4px;background:#171126;box-shadow:0 0 0 7px #9b68e922,0 14px 35px #0005}
+.home-team-mark{position:absolute;right:-3px;bottom:1px;width:39px;height:39px;display:grid;place-items:center;border:3px solid #100d1d;border-radius:50%;background:linear-gradient(135deg,#a13cff,#536dff);color:#fff}
+.home-team-mark svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.home-team-member h3{margin:0 0 7px;font-size:16px;line-height:1.3;color:#fff}
+.home-team-role{display:block;color:#c49bff;font-size:10px;font-weight:800;letter-spacing:.8px;text-transform:uppercase}
+.home-team-member>p{max-width:220px;margin:12px auto 0;color:#bcb6cb;font-size:11px;line-height:1.7}
+.home-team-action{display:flex;justify-content:center;margin-top:42px}
+.home-team-link{display:inline-flex;align-items:center;gap:12px;padding:12px 20px;border:1px solid #ffffff35;border-radius:999px;color:#f4efff;font-size:11px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;transition:border-color .2s,background .2s,color .2s}
+.home-team-link:hover{border-color:#b58bff;background:#ffffff0b;color:#d8c1ff}
+.home-team-link svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:900px){.home-team-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:620px;row-gap:38px}.home-team-grid:before{display:none}.home-team-photo-wrap{width:146px;height:146px}}
+@media(max-width:650px){.home-team-section{padding:68px 0 74px}.home-team-heading{margin-bottom:34px}.home-team-heading h2{font-size:clamp(31px,8.4vw,42px);letter-spacing:-1.4px}.home-team-heading>p{font-size:12px;line-height:1.75}.home-team-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 12px}.home-team-member{padding:0 3px}.home-team-photo-wrap{width:clamp(104px,29vw,136px);height:clamp(104px,29vw,136px);margin-bottom:15px}.home-team-mark{width:33px;height:33px}.home-team-mark svg{width:16px;height:16px}.home-team-member h3{font-size:13px;overflow-wrap:anywhere}.home-team-role{font-size:8px;letter-spacing:.55px}.home-team-member>p{font-size:10px;line-height:1.6;margin-top:9px}.home-team-action{margin-top:32px}}
+@media(max-width:360px){.home-team-grid{column-gap:8px}.home-team-photo-wrap{width:100px;height:100px}.home-team-member h3{font-size:12px}.home-team-member>p{font-size:9px}}
+
 </style>
 
 </head>
@@ -382,12 +407,50 @@
  </div>
 </div>
 </section>
-<section class="section" id="team"><div class="container"><div class="section-heading"><span class="eyebrow">The People Behind the Work</span><h2>Meet the Team <span class="gradient-text">Behind Abrabal Agency.</span></h2><p>A team bringing together e commerce, website design, social media and search optimization expertise to help brands grow.</p></div><div class="team-grid">
-<article class="team-card"><img class="team-avatar" src="assets/team/abrabal.jpg.jpg" alt="Abrabal Agency CEO" loading="lazy"><h3>Abrabal Agency</h3><p class="team-role">CEO / Dropshipping Specialist</p><div class="team-social"><a href="mailto:abrabalteamagency@gmail.com" aria-label="Email Abrabal">Email</a><a href="https://www.facebook.com/profile.php?id=100088809683190" target="_blank" rel="noopener noreferrer">Facebook</a><a href="tel:+2348103813072">Call</a><a href="https://wa.me/2348081210938" target="_blank" rel="noopener noreferrer">WhatsApp</a><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-service.html">Terms of Service</a><a href="https://www.instagram.com/abrabalteam_agency?hvrq=cDc1NnBqbWZ2ZTA5" target="_blank" rel="noopener noreferrer">Instagram</a></div><p class="team-bio">Leads Abrabal Agency with a focus on e commerce, dropshipping and digital marketing, helping businesses build and grow their online presence.</p></article>
-<article class="team-card"><img class="team-avatar" src="assets/team/sammywealth.png" alt="Sammywealth" loading="lazy"><h3>Sammywealth</h3><p class="team-role">Website Designer</p><div class="team-social"><a href="https://www.instagram.com/shopifyexpert011" target="_blank" rel="noopener noreferrer">Instagram</a></div><p class="team-bio">Creates visually engaging, user friendly websites, bringing website design experience and a focus on polished digital experiences.</p></article>
-<article class="team-card"><img class="team-avatar" src="assets/team/kejiexpert.png" alt="Kejiexpert" loading="lazy"><h3>Kejiexpert</h3><p class="team-role">Social Media Marketer</p><div class="team-social"><a href="https://www.instagram.com/kejiexpert12" target="_blank" rel="noopener noreferrer">Instagram</a></div><p class="team-bio">Focuses on engaging social content and building online communities to help brands connect with their audiences.</p></article>
-<article class="team-card"><img class="team-avatar" src="assets/team/haywhy-pro.jpg" alt="Haywhy Pro" loading="lazy"><h3>Haywhy Pro</h3><p class="team-role">Website SEO Expert</p><p class="team-bio">Works on website search optimization and online visibility, helping businesses improve how they are discovered through search.</p></article>
-</div></div></section>
+<section class="home-team-section" id="team" aria-labelledby="home-team-title">
+  <div class="container">
+    <div class="home-team-heading">
+      <span class="eyebrow">THE PEOPLE BEHIND THE WORK</span>
+      <h2 id="home-team-title">Meet the Team Behind <span class="gradient-text">Abrabal Agency.</span></h2>
+      <p>Meet the creative minds bringing together website design, social media, search and ecommerce expertise to help businesses move forward.</p>
+    </div>
+    <div class="home-team-grid">
+      <article class="home-team-member">
+        <div class="home-team-photo-wrap">
+          <img src="assets/team/abrabal.jpg.jpg" alt="Abrabal Agency founder" loading="lazy" decoding="async">
+          <span class="home-team-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 2 2.3 6.1L21 10l-6.7 1.9L12 18l-2.3-6.1L3 10l6.7-1.9L12 2Z"/><path d="m19 16 .9 2.1L22 19l-2.1.9L19 22l-.9-2.1L16 19l2.1-.9L19 16Z"/></svg></span>
+        </div>
+        <h3>Abrabal Agency</h3><span class="home-team-role">Founder &amp; CEO</span>
+        <p>Leads the agency’s direction across ecommerce, dropshipping and digital growth.</p>
+      </article>
+      <article class="home-team-member">
+        <div class="home-team-photo-wrap">
+          <img src="assets/team/sammywealth.png" alt="Sammywealth, website designer" loading="lazy" decoding="async">
+          <span class="home-team-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4M7 8h10m-10 4h6"/></svg></span>
+        </div>
+        <h3>Sammywealth</h3><span class="home-team-role">Website Designer</span>
+        <p>Creates polished, user-friendly websites that bring each brand’s online presence to life.</p>
+      </article>
+      <article class="home-team-member">
+        <div class="home-team-photo-wrap">
+          <img src="assets/team/kejiexpert.png" alt="Kejiexpert, social media marketer" loading="lazy" decoding="async">
+          <span class="home-team-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v12H8l-4 4V5Z"/><path d="M8 9h8m-8 4h5"/></svg></span>
+        </div>
+        <h3>Kejiexpert</h3><span class="home-team-role">Social Media Marketer</span>
+        <p>Builds engaging social content and helps brands connect with their communities.</p>
+      </article>
+      <article class="home-team-member">
+        <div class="home-team-photo-wrap">
+          <img src="assets/team/haywhy-pro.jpg" alt="Haywhy Pro, website SEO expert" loading="lazy" decoding="async">
+          <span class="home-team-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5M8 11l2 2 4-4"/></svg></span>
+        </div>
+        <h3>Haywhy Pro</h3><span class="home-team-role">Website SEO Expert</span>
+        <p>Improves website visibility and helps businesses get discovered through search.</p>
+      </article>
+    </div>
+    <div class="home-team-action"><a class="home-team-link" href="team.html">Meet the full team <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
+  </div>
+</section>
 
 <section class="section section-light faq-home-section" id="faq" aria-labelledby="faq-home-title"><div class="container faq-home-layout"><div class="faq-home-intro"><span class="eyebrow">HELP, WITHOUT THE GUESSWORK</span><h2 id="faq-home-title">A few things you might be <span class="gradient-text">wondering about.</span></h2><p>From choosing the right service to what happens after you get in touch, here are clear answers to help you take the next step with confidence.</p><a class="btn" href="faqs.html">Explore all FAQs</a><div class="faq-home-note"><span><strong>Still have a question?</strong><small>Our team is happy to help you figure out the right next step.</small><a href="https://wa.me/2348081210938" target="_blank" rel="noopener noreferrer">Talk to us on WhatsApp</a></span></div></div><div class="faq-home-list"><div class="faq-home-topline"><span>QUICK ANSWERS</span><span>01 — 05</span></div>
 <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false" aria-controls="home-faq-a1"><span>How long does a website project usually take?</span><span class="faq-toggle" aria-hidden="true">+</span></button><div class="faq-answer" id="home-faq-a1">It depends on the scope, features, content and feedback process. Once we understand your requirements, we’ll recommend a realistic timeline before work begins.</div></div>
