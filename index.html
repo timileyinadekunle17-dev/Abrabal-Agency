@@ -208,6 +208,30 @@
 .footer-bottom strong{color:#34234f!important}
 @media(max-width:760px){.footer-top{display:block;padding-bottom:28px}.footer-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:28px}.footer-col b{margin-bottom:12px}.footer-col a{line-height:1.5;margin:9px 0}}
 @media(max-width:480px){.footer{padding:42px 0 18px!important}.footer-links{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:22px}.footer-bottom{flex-direction:column;gap:8px}.footer-logo{width:52px;height:52px}}
+
+/* Homepage FAQ layout refresh */
+.faq-home-section{padding:104px 0;background:#f6f4fa;color:#171426}
+.faq-home-layout{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(38px,7vw,100px);align-items:start}
+.faq-home-intro{max-width:440px}
+.faq-home-intro>.eyebrow{color:#7d45d5;margin-bottom:18px}
+.faq-home-intro h2{font-size:clamp(34px,4.4vw,52px);line-height:1.04;letter-spacing:-2px;margin:0 0 18px;color:#171426}
+.faq-home-intro>p{color:#6d687b;font-size:14px;line-height:1.85;margin:0 0 25px}
+.faq-home-intro>.btn{margin-bottom:30px}
+.faq-home-note{display:flex;gap:13px;align-items:flex-start;padding-top:22px;border-top:1px solid #e3deec}
+.faq-home-note-icon{width:34px;height:34px;flex:0 0 34px;display:grid;place-items:center;border-radius:50%;background:#ece4fb;color:#7440ce;font-size:17px;font-weight:800}
+.faq-home-note strong,.faq-home-note small,.faq-home-note a{display:block}
+.faq-home-note strong{font-size:12px;margin:1px 0 5px}
+.faq-home-note small{color:#777185;font-size:11px;line-height:1.6}
+.faq-home-note a{margin-top:8px;color:#7742cf;font-size:11px;font-weight:800}
+.faq-home-list{padding:24px 30px 10px;border:1px solid #e8e3ef;border-radius:20px;background:#fff;box-shadow:0 18px 48px #24133e0a}
+.faq-home-topline{display:flex;justify-content:space-between;padding:0 0 13px;color:#8a829a;font-size:9px;font-weight:800;letter-spacing:1.4px}
+.faq-home-list .faq-item{border-top:1px solid #eeeaf3;border-bottom:0}
+.faq-home-list .faq-question{padding:20px 0;font-size:13px;color:#211b32}
+.faq-home-list .faq-toggle{width:27px;height:27px;flex:0 0 27px;display:grid;place-items:center;border:1px solid #e8e1f3;border-radius:50%;font-size:19px;line-height:1;color:#7945d2;transition:transform .2s,background .2s}
+.faq-home-list .faq-item.open .faq-toggle{background:#f0e9fb;transform:rotate(45deg)}
+.faq-home-list .faq-answer{padding:0 44px 18px 0;font-size:12px;color:#706b7d;line-height:1.8}
+@media(max-width:800px){.faq-home-layout{grid-template-columns:1fr;gap:32px}.faq-home-intro{max-width:650px}.faq-home-intro h2{max-width:580px}}
+@media(max-width:680px){.faq-home-section{padding:72px 0}.faq-home-list{padding:18px 18px 6px;border-radius:15px}.faq-home-list .faq-question{font-size:12px;gap:14px}.faq-home-list .faq-answer{padding-right:38px}.faq-home-intro h2{font-size:37px}}
 </style>
 <style>
 /* Homepage uses the shared lavender footer styling above. */
@@ -325,15 +349,12 @@
 <article class="team-card"><img class="team-avatar" src="assets/team/haywhy-pro.jpg" alt="Haywhy Pro" loading="lazy"><h3>Haywhy Pro</h3><p class="team-role">Website SEO Expert</p><p class="team-bio">Works on website search optimization and online visibility, helping businesses improve how they are discovered through search.</p></article>
 </div></div></section>
 
-<section class="section section-light" id="faq" style="padding-top:0"><div class="container"><div class="section-heading center"><span class="eyebrow">FAQs</span><h2>Good Questions. <span class="gradient-text">Straight Answers.</span></h2><p>Here are a few things to know before starting a project with Abrabal Agency.</p></div><div class="faq-list">
-<div class="faq-item"><button class="faq-question" aria-expanded="false"><span>How long does it take to complete a website?</span><span>＋</span></button><div class="faq-answer">Timing depends on the type of website, its features, the amount of content and how quickly feedback and materials are provided. After discussing your requirements, we’ll outline a realistic timeline for your project.</div></div>
-<div class="faq-item"><button class="faq-question" aria-expanded="false"><span>What information do you need before starting a project?</span><span>＋</span></button><div class="faq-answer">Usually we’ll discuss your business, goals, target audience, services or products, preferred style, content and any examples you like. The exact materials depend on the project, and we’ll guide you through what’s needed.</div></div>
-<div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Do you work with existing websites?</span><span>＋</span></button><div class="faq-answer">Yes. We can discuss improvements to an existing website, including design, usability, content structure, performance and search visibility. We’ll first review the current setup and agree on a suitable scope.</div></div>
-<div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Can you redesign an existing Shopify or Wix website?</span><span>＋</span></button><div class="faq-answer">Yes. We can review an existing Shopify or Wix website and discuss a redesign or targeted improvements based on your brand, products, customers and business goals.</div></div>
-<div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Do you provide ongoing website support?</span><span>＋</span></button><div class="faq-answer">Support requirements can be discussed as part of your project. We’ll clarify the tasks, availability and terms before agreeing to any ongoing support arrangement.</div></div>
-<div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Do you create promotional and product videos?</span><span>＋</span></button><div class="faq-answer">Yes. Our creative services include UGC style video production and AI assisted video creation for product stories, promotional concepts and digital campaigns. The approach depends on your brief and required deliverables.</div></div>
-<div class="faq-item"><button class="faq-question" aria-expanded="false"><span>How do clients get started?</span><span>＋</span></button><div class="faq-answer">Send us a message on WhatsApp or email with a short description of your business and what you want to achieve. We’ll discuss your needs and the appropriate next steps.</div></div>
-<div class="faq-item"><button class="faq-question" aria-expanded="false"><span>Do you require website passwords?</span><span>＋</span></button><div class="faq-answer">We do not ask clients to share personal passwords. Where access is needed, we’ll use an appropriate secure collaborator, staff or delegated access method supported by the platform whenever available. You should retain ownership and control of your accounts.</div></div>
+<section class="section section-light faq-home-section" id="faq" aria-labelledby="faq-home-title"><div class="container faq-home-layout"><div class="faq-home-intro"><span class="eyebrow">HELP, WITHOUT THE GUESSWORK</span><h2 id="faq-home-title">A few things you might be <span class="gradient-text">wondering about.</span></h2><p>From choosing the right service to what happens after you get in touch, here are clear answers to help you take the next step with confidence.</p><a class="btn" href="faqs.html">Explore all FAQs <span aria-hidden="true">↗</span></a><div class="faq-home-note"><span class="faq-home-note-icon" aria-hidden="true">?</span><span><strong>Still have a question?</strong><small>Our team is happy to help you figure out the right next step.</small><a href="https://wa.me/2348081210938" target="_blank" rel="noopener noreferrer">Talk to us on WhatsApp</a></span></div></div><div class="faq-home-list"><div class="faq-home-topline"><span>QUICK ANSWERS</span><span>01 — 05</span></div>
+<div class="faq-item"><button class="faq-question" type="button" aria-expanded="false" aria-controls="home-faq-a1"><span>How long does a website project usually take?</span><span class="faq-toggle" aria-hidden="true">+</span></button><div class="faq-answer" id="home-faq-a1">It depends on the scope, features, content and feedback process. Once we understand your requirements, we’ll recommend a realistic timeline before work begins.</div></div>
+<div class="faq-item"><button class="faq-question" type="button" aria-expanded="false" aria-controls="home-faq-a2"><span>Can you improve or redesign my existing website?</span><span class="faq-toggle" aria-hidden="true">+</span></button><div class="faq-answer" id="home-faq-a2">Yes. We can review your current website or online store and discuss improvements to its design, usability, content structure, performance and search visibility.</div></div>
+<div class="faq-item"><button class="faq-question" type="button" aria-expanded="false" aria-controls="home-faq-a3"><span>What do you need from me to get started?</span><span class="faq-toggle" aria-hidden="true">+</span></button><div class="faq-answer" id="home-faq-a3">We’ll start with your business details, goals, audience and a description of what you need. We’ll then guide you through any content, assets or access required for your specific project.</div></div>
+<div class="faq-item"><button class="faq-question" type="button" aria-expanded="false" aria-controls="home-faq-a4"><span>Do you create UGC and promotional videos?</span><span class="faq-toggle" aria-hidden="true">+</span></button><div class="faq-answer" id="home-faq-a4">Yes. Our creative services include UGC-style video production and AI-assisted video creation for product stories, promotions and digital campaigns.</div></div>
+<div class="faq-item"><button class="faq-question" type="button" aria-expanded="false" aria-controls="home-faq-a5"><span>How do I get a quote for my project?</span><span class="faq-toggle" aria-hidden="true">+</span></button><div class="faq-answer" id="home-faq-a5">Send us a short description of your project through WhatsApp or email. We’ll discuss the scope and clarify the deliverables before providing a suitable quote.</div></div>
 </div></div></section>
 <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
  <div class="container contact-wrap">
