@@ -105,7 +105,7 @@
 
 /* FAQ page layout refresh: consistent content width, balanced category grid, no decorative iconography */
 .faq-page-hero{position:relative;isolation:isolate;overflow:hidden;min-height:570px;display:flex;align-items:center;padding:82px 0 76px;background:#171126;color:#fff}
-.faq-page-hero-image{position:absolute;inset:0;z-index:-2;background:url("https://shadowcast.marketing/images/blog/homepage-contact.png") center 48%/cover no-repeat;opacity:.38}
+.faq-page-hero-image{position:absolute;inset:0;z-index:-2;background:url("https://images.unsplash.com/photo-1758876203754-1bc9d3ed514c?auto=format&fit=crop&w=1600&q=85") center 48%/cover no-repeat;opacity:.38}
 .faq-page-hero-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(17,12,31,.98) 0%,rgba(22,15,40,.91) 48%,rgba(22,15,40,.52) 100%)}
 .faq-page-hero-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.82fr);gap:clamp(35px,6vw,76px);align-items:center;position:relative;z-index:1}
 .faq-page-hero-copy{max-width:650px}
