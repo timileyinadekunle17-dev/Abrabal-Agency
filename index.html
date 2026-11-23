@@ -316,6 +316,24 @@
 @media(max-width:650px){.home-team-photo-wrap{width:clamp(132px,36vw,158px);height:clamp(132px,36vw,158px);margin-bottom:16px}.home-team-mark{width:38px;height:38px}.home-team-mark svg{width:19px;height:19px}.home-team-member>p{font-size:10px;line-height:1.7;margin-top:9px}.home-team-socials{margin-top:12px;gap:8px}.home-team-socials a{width:32px;height:32px}.home-team-socials svg{width:16px;height:16px}.home-team-social-note{font-size:8px}}
 @media(max-width:360px){.home-team-photo-wrap{width:116px;height:116px}}
 
+
+/* Official social brand colours and contact icon treatment for team profiles. */
+.home-team-socials{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:11px;margin-top:18px;min-height:36px}
+.home-team-socials a,.home-team-socials>span{width:36px;height:36px;display:inline-flex;align-items:center;justify-content:center;border:1px solid #ffffff22;border-radius:50%;background:#fff;color:#fff;transition:transform .2s,filter .2s}
+.home-team-socials a:hover{transform:translateY(-2px);filter:brightness(1.12)}
+.home-team-socials svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.home-team-socials .social-email{background:#6b7280;color:#fff}
+.home-team-socials .social-facebook{background:#1877f2;color:#fff}
+.home-team-socials .social-facebook svg{fill:#fff;stroke:none}
+.home-team-socials .social-phone{background:#64748b;color:#fff}
+.home-team-socials .social-whatsapp{background:#25d366;color:#fff}
+.home-team-socials .social-whatsapp svg{stroke:#fff}
+.home-team-socials .social-instagram{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%);color:#fff}
+.home-team-socials .social-instagram svg{stroke:#fff}
+.home-team-socials-empty>span{cursor:default}
+.home-team-socials-ceo{gap:9px}
+@media(max-width:650px){.home-team-socials{gap:8px;margin-top:12px}.home-team-socials a,.home-team-socials>span{width:32px;height:32px}.home-team-socials svg{width:16px;height:16px}}
+
 </style>
 
 </head>
@@ -440,7 +458,13 @@
         </div>
         <h3>Abrabal Agency</h3><span class="home-team-role">Founder and CEO</span>
         <p>Guides the agency’s vision and leads its ecommerce and dropshipping strategy. Combines business development, digital marketing and practical online retail knowledge to help brands build stronger stores, reach the right customers and turn more opportunities into sustainable business growth.</p>
-        <div class="home-team-socials" aria-label="Abrabal Agency social and contact links"><a href="https://www.facebook.com/profile.php?id=100088809683190&amp;mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" aria-label="Abrabal Agency on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.3V13h2.8v8h3.4Z"/></svg></a><a href="https://wa.me/23408081210938" target="_blank" rel="noopener noreferrer" aria-label="Contact Abrabal Agency on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.7a8 8 0 0 1-11.8 7L4 20l1.3-4A8 8 0 1 1 20 11.7Z"/><path d="M8.5 8.2c.2-.5.5-.5.8-.5h.5c.2 0 .4.1.5.4l.7 1.7c.1.2.1.4-.1.6l-.5.6c-.2.2-.2.4-.1.6.6 1 1.4 1.8 2.5 2.3.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.6.8c.3.1.4.3.4.5 0 .3-.2 1.2-.8 1.6-.5.4-1.1.6-1.8.4-1-.2-2.3-.8-3.8-2.1-1.2-1.1-2-2.5-2.3-3.5-.3-.9 0-1.8.5-2.4Z"/></svg></a></div>
+        <div class="home-team-socials home-team-socials-ceo" aria-label="Abrabal Agency CEO contact details">
+          <a class="social-email" href="mailto:abrabalteamagency@gmail.com" aria-label="Email Abrabal Agency"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></a>
+          <a class="social-facebook" href="https://www.facebook.com/profile.php?id=100088809683190&amp;mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" aria-label="Abrabal Agency on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.3V13h2.8v8h3.4Z"/></svg></a>
+          <a class="social-phone" href="tel:+23408103813072" aria-label="Call Abrabal Agency on +234 810 381 3072"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3H4.5A1.5 1.5 0 0 0 3 4.5C3 13.6 10.4 21 19.5 21a1.5 1.5 0 0 0 1.5-1.5V17l-5-2-2 2a14 14 0 0 1-6-6l2-2-2-6Z"/></svg></a>
+          <a class="social-phone" href="tel:08081210938" aria-label="Call Abrabal Agency on 0808 121 0938"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3H4.5A1.5 1.5 0 0 0 3 4.5C3 13.6 10.4 21 19.5 21a1.5 1.5 0 0 0 1.5-1.5V17l-5-2-2 2a14 14 0 0 1-6-6l2-2-2-6Z"/></svg></a>
+          <a class="social-whatsapp" href="https://wa.me/2348081210938" target="_blank" rel="noopener noreferrer" aria-label="Message Abrabal Agency on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.7a8 8 0 0 1-11.8 7L4 20l1.3-4A8 8 0 1 1 20 11.7Z"/><path d="M8.5 8.2c.2-.5.5-.5.8-.5h.5c.2 0 .4.1.5.4l.7 1.7c.1.2.1.4-.1.6l-.5.6c-.2.2-.2.4-.1.6.6 1 1.4 1.8 2.5 2.3.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.6.8c.3.1.4.3.4.5 0 .3-.2 1.2-.8 1.6-.5.4-1.1.6-1.8.4-1-.2-2.3-.8-3.8-2.1-1.2-1.1-2-2.5-2.3-3.5-.3-.9 0-1.8.5-2.4Z"/></svg></a>
+        </div>
       </article>
       <article class="home-team-member">
         <div class="home-team-photo-wrap">
@@ -449,7 +473,10 @@
         </div>
         <h3>Sammywealth</h3><span class="home-team-role">Website Designer</span>
         <p>Designs attractive, intuitive websites that make a strong first impression and guide visitors with clarity. Focuses on thoughtful layouts, visual consistency, responsive experiences and easy navigation, turning each brand’s ideas into a professional online presence that works beautifully across phones, tablets and desktops.</p>
-        <div class="home-team-socials" aria-label="Sammywealth social profile"><a href="https://www.instagram.com/shopifyexpert011?igsh=MXA2NjBlbmNnZnVmZA==" target="_blank" rel="noopener noreferrer" aria-label="Sammywealth on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></a></div>
+        <div class="home-team-socials home-team-socials-empty" aria-label="Sammywealth Instagram and WhatsApp profiles not linked">
+          <span class="social-instagram" aria-label="Instagram profile not provided"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></span>
+          <span class="social-whatsapp" aria-label="WhatsApp profile not provided"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.7a8 8 0 0 1-11.8 7L4 20l1.3-4A8 8 0 1 1 20 11.7Z"/><path d="M8.5 8.2c.2-.5.5-.5.8-.5h.5c.2 0 .4.1.5.4l.7 1.7c.1.2.1.4-.1.6l-.5.6c-.2.2-.2.4-.1.6.6 1 1.4 1.8 2.5 2.3.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.6.8c.3.1.4.3.4.5 0 .3-.2 1.2-.8 1.6-.5.4-1.1.6-1.8.4-1-.2-2.3-.8-3.8-2.1-1.2-1.1-2-2.5-2.3-3.5-.3-.9 0-1.8.5-2.4Z"/></svg></span>
+        </div>
       </article>
       <article class="home-team-member">
         <div class="home-team-photo-wrap">
@@ -458,7 +485,10 @@
         </div>
         <h3>Kejiexpert</h3><span class="home-team-role">Social Media Marketer</span>
         <p>Plans and creates engaging social content that gives brands a consistent voice and a recognisable presence. Brings together audience insight, creative storytelling, platform focused campaigns and community engagement to grow meaningful connections, strengthen brand awareness and encourage the right people to take action.</p>
-        <div class="home-team-socials" aria-label="Kejiexpert social profile"><a href="https://www.instagram.com/kejiexpert12?igsh=YTcwZWc5NTR5bDNk" target="_blank" rel="noopener noreferrer" aria-label="Kejiexpert on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></a></div>
+        <div class="home-team-socials home-team-socials-empty" aria-label="Kejiexpert Instagram and WhatsApp profiles not linked">
+          <span class="social-instagram" aria-label="Instagram profile not provided"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></span>
+          <span class="social-whatsapp" aria-label="WhatsApp profile not provided"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.7a8 8 0 0 1-11.8 7L4 20l1.3-4A8 8 0 1 1 20 11.7Z"/><path d="M8.5 8.2c.2-.5.5-.5.8-.5h.5c.2 0 .4.1.5.4l.7 1.7c.1.2.1.4-.1.6l-.5.6c-.2.2-.2.4-.1.6.6 1 1.4 1.8 2.5 2.3.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.6.8c.3.1.4.3.4.5 0 .3-.2 1.2-.8 1.6-.5.4-1.1.6-1.8.4-1-.2-2.3-.8-3.8-2.1-1.2-1.1-2-2.5-2.3-3.5-.3-.9 0-1.8.5-2.4Z"/></svg></span>
+        </div>
       </article>
       <article class="home-team-member">
         <div class="home-team-photo-wrap">
@@ -467,7 +497,10 @@
         </div>
         <h3>Haywhy Pro</h3><span class="home-team-role">Website SEO Expert</span>
         <p>Helps websites earn stronger visibility by improving the way search engines understand and rank their content. Focuses on search friendly site structure, relevant keyword targeting, on page improvements and technical foundations so businesses can attract more qualified visitors and build lasting organic reach.</p>
-        <div class="home-team-socials home-team-socials-empty" aria-label="No individual social profile link has been provided"><span class="home-team-social-note">Connect through Abrabal Agency</span><a href="https://wa.me/23408081210938" target="_blank" rel="noopener noreferrer" aria-label="Contact Haywhy Pro through Abrabal Agency on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.7a8 8 0 0 1-11.8 7L4 20l1.3-4A8 8 0 1 1 20 11.7Z"/><path d="M8.5 8.2c.2-.5.5-.5.8-.5h.5c.2 0 .4.1.5.4l.7 1.7c.1.2.1.4-.1.6l-.5.6c-.2.2-.2.4-.1.6.6 1 1.4 1.8 2.5 2.3.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.6.8c.3.1.4.3.4.5 0 .3-.2 1.2-.8 1.6-.5.4-1.1.6-1.8.4-1-.2-2.3-.8-3.8-2.1-1.2-1.1-2-2.5-2.3-3.5-.3-.9 0-1.8.5-2.4Z"/></svg></a></div>
+        <div class="home-team-socials home-team-socials-empty" aria-label="Haywhy Pro Instagram and WhatsApp profiles not linked">
+          <span class="social-instagram" aria-label="Instagram profile not provided"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></span>
+          <span class="social-whatsapp" aria-label="WhatsApp profile not provided"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.7a8 8 0 0 1-11.8 7L4 20l1.3-4A8 8 0 1 1 20 11.7Z"/><path d="M8.5 8.2c.2-.5.5-.5.8-.5h.5c.2 0 .4.1.5.4l.7 1.7c.1.2.1.4-.1.6l-.5.6c-.2.2-.2.4-.1.6.6 1 1.4 1.8 2.5 2.3.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.6.8c.3.1.4.3.4.5 0 .3-.2 1.2-.8 1.6-.5.4-1.1.6-1.8.4-1-.2-2.3-.8-3.8-2.1-1.2-1.1-2-2.5-2.3-3.5-.3-.9 0-1.8.5-2.4Z"/></svg></span>
+        </div>
       </article>
     </div>
     <div class="home-team-action"><a class="home-team-link" href="team.html">Meet the full team <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
